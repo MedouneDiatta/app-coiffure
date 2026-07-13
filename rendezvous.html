@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>rendezvous</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <form id="formulaire">
+      <label for="nom">Entrer votre nom</label>
+      <input
+        type="text"
+        placeholder=" ex:Medoune"
+        id="nom"
+        pattern="[A-Za-zÀ-ÿ\s-]+"
+        required
+      />
+      <label for="numero">Entrer votre numero de telephone</label>
+      <input
+        type="tel"
+        placeholder="ex:77 000 00 00"
+        id="numero"
+        pattern="[0-9]{9}"
+        required
+      />
+      <label for="adress">Entrer votre Adress</label>
+      <input
+        type="text"
+        placeholder="ex:Thies Fahu 1"
+        id="adress"
+        pattern="[A-Za-zÀ-ÿ0-9\s]+"
+        required
+      />
+      <select id="prestation" required>
+        <option value="">Selectionner la prestation</option>
+        <option value="degrade">Degrade</option>
+        <option value="coifureSimple">Coifure Simple</option>
+        <option value="loks">Loks</option>
+      </select>
+
+      <label>
+        <input type="radio" name="lieu" value="salon" checked /> Au salon
+      </label>
+      <label>
+        <input type="radio" name="lieu" value="domicile" /> À domicile
+      </label>
+
+      <input type="date" id="date" required />
+      <input type="time" id="time" required />
+      <button type="submit" id="button">Confirmer</button>
+    </form>
+
+    <div id="recapitulatif"></div>
+    <script src="js/data.js"></script>
+    <script src="js/rendezvous.js"></script>
+  </body>
+</html>
