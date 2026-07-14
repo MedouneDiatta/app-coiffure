@@ -63,4 +63,6 @@ formulaire.addEventListener("submit", (e) => {
      <p>Heure : ${valeurTime}</p>
      <p>Lieu : ${valeurLieu}</p>
   `;
+  recapitulatif.style.display = "block";
+  formulaire.reset();
 });

@@ -1,0 +1,30 @@
+#profil-container {
+  display: flex;
+  flex-direction: column;
+}
+#realisations {
+  order: 1;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin: 1rem 0;
+}
+#realisations img {
+  border: 1px solid var(--bs-border-color, #ddd);
+  border-radius: 8px;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
+#identite {
+  order: 2;
+}
+#domicile {
+  order: 3;
+}
+#prestations {
+  order: 4;
+}
+#profil-container > a {
+  order: 5;
+}

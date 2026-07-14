@@ -8,14 +8,19 @@ const afficherCoiffeurs = (tableauCoiffeurs) => {
     //   console.log(coiffeur.nom);
     let prestation = Object.keys(coiffeur.prestations);
     htmlCartes += `
-    <div class="carte-coiffeur">
-        <h4>Nom : ${coiffeur.nom}</h4>
-         <p>Spécialité : ${coiffeur.specialite}</p>
-         <p>Note : ${coiffeur.note}</p>
-         <p>A Domicil :${coiffeur.aDomicile ? "Oui" : "Non"}</p>
-         <p>Prestations :${coiffeur.prestations[prestation[0]]} FCFA</p>
-         <a href="profil.html?id=${coiffeur.id}">Voir le Profil</a>
-    </div>  
+    <div class="col-12 col-md-6 col-lg-4">
+       <div class="card carte-coiffeur mb-3">
+           <div class="card-body">
+           <h4>Nom : ${coiffeur.nom}</h4>
+           <p>Spécialité : ${coiffeur.specialite}</p>
+           <p>Note : ${coiffeur.note}</p>
+           <p>A Domicil :${coiffeur.aDomicile ? "Oui" : "Non"}</p>
+           <p>Prestations :${coiffeur.prestations[prestation[0]]} FCFA</p>
+           <a href="profil.html?id=${coiffeur.id}" class="btn btn-primary">Voir le Profil</a>
+        </div>
+       
+       </div>  
+    </div>
 
   `;
   });
