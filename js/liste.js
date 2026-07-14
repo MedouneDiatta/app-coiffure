@@ -23,16 +23,19 @@ const afficherCoiffeurs = (tableauCoiffeurs) => {
                 <h4 class="card-title">${coiffeur.nom}</h4>
 
                 <p class="card-text mb-1">
-                    <strong>Spécialité :</strong> ${coiffeur.specialite}
+                   <i class="bi bi-scissors"></i>
+                   <strong>Spécialité :</strong> ${coiffeur.specialite}
                 </p>
 
                 <p class="card-text mb-1">
-                    <strong>Note :</strong> ⭐ ${coiffeur.note}
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <strong>Note :</strong> ${coiffeur.note}
                 </p>
 
                 <p class="card-text mb-1">
-                    <strong>À domicile :</strong>
-                    ${coiffeur.aDomicile ? "Oui" : "Non"}
+                    <i class="bi bi-house-door-fill"></i>
+                   <strong>À domicile :</strong>
+                   ${coiffeur.aDomicile ? "Oui" : "Non"}
                 </p>
 
                 <p class="card-text mb-3">
@@ -41,8 +44,9 @@ const afficherCoiffeurs = (tableauCoiffeurs) => {
                 </p>
 
                 <a href="profil.html?id=${coiffeur.id}" class="btn btn-primary">
-    Voir le profil
-</a>
+                   <i class="bi bi-person-circle"></i>
+                    Voir le profil
+                 </a>
 
             </div>
 
