@@ -85,7 +85,7 @@ let coiffeurs = [
   },
   {
     id: 8,
-    photo: "images/beranrd.jpg",
+    photo: "images/bernard.jpg",
     nom: "Béatrice",
     specialite: "Perruque",
     anneesExperiences: 2,
@@ -97,7 +97,7 @@ let coiffeurs = [
   },
   {
     id: 9,
-    photo: "mages/bernard.jpg",
+    photo: "images/bernard.jpg",
     nom: "Arnaud",
     specialite: "Coiffure",
     anneesExperiences: 5,
