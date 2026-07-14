@@ -16,7 +16,7 @@ const realisationContainer = document.getElementById("realisations");
 identiteContainer.innerHTML = `
   <h4>Nom : ${coiffeurTrouve.nom}</h4>
   <p>Spécialité : ${coiffeurTrouve.specialite}</p>
-  <p>Experience : ${coiffeurTrouve.anneesExperiences}</p>
+  <p>Experience : ${coiffeurTrouve.anneesExperiences} ans</p>
   <p>Note : ${coiffeurTrouve.note}</p>
 `;
 domicileContainer.innerHTML = `
