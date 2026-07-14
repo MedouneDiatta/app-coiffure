@@ -19,6 +19,11 @@ identiteContainer.innerHTML = `
   <p>Note : ${coiffeurTrouve.note}</p>
 `;
 
+domicileContainer.innerHTML = `
+  <p>Domicile : ${coiffeurTrouve.aDomicile ? "A la maison" : "Au Salon"}</p>
+  <p>Zone/Quartier : ${coiffeurTrouve.zoneQuartier}</p>
+`;
+
 let lesPrestations = "";
 
 let prestation = Object.keys(coiffeurTrouve.prestations);
