@@ -39,6 +39,7 @@ prestationContainer.innerHTML = lesPrestations;
 let lesRealisations = "";
 coiffeurTrouve.realisations.forEach((realisation) => {
   lesRealisations += `
+   
        <img src="images/${realisation}" class="img-fluid">
     `;
 });
