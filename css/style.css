@@ -27,21 +27,33 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
-
 /* Images des réalisations */
 #realisations {
   display: flex;
   gap: 8px;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  justify-content: center;
   margin: 1rem 0;
 }
 
 
+/* Les 2 enfants directs (img + .photo-plus) se partagent l'espace à parts égales,
+   ce qui les garde toujours côte à côte, même sur petit écran */
+#realisations > img,
+#realisations > .photo-plus {
+  flex: 1 1 0;
+  max-width: 150px;
+  min-width: 0;
+}
+
+
 #realisations img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  height: auto;
   border: 1px solid var(--bs-border-color, #ddd);
   border-radius: 8px;
-  width: 150px;
-  height: 150px;
   object-fit: cover;
 }
 
@@ -91,20 +103,10 @@ h6 {
     font-size: 0.85rem;
   }
 }
-
 /* Conteneur de la deuxième photo avec le +X */
 .photo-plus {
   position: relative;
-  display: inline-block;
-}
-
-
-/* Taille des images de réalisations */
-#realisations img {
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 10px;
+  cursor: pointer; /* curseur pointeur pour montrer que c'est cliquable */
 }
 
 
@@ -128,4 +130,15 @@ h6 {
   font-weight: 600;
 
   border-radius: 10px;
+  cursor: pointer;
+}
+
+
+/* Images de la modale (galerie complète) : dimensions fixées à l'avance
+   pour éviter que la page "saute"/clignote pendant le chargement des images */
+#galerie-complete img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
 }
