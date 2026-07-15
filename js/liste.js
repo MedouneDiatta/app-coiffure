@@ -54,7 +54,7 @@ const afficherCoiffeurs = (tableauCoiffeurs) => {
     </div>
     `;
   });
-  console.log(htmlCartes);
+  // console.log(htmlCartes);
 
   listeDesCoiffeurs.innerHTML = htmlCartes;
 
@@ -86,7 +86,7 @@ afficherCoiffeurs(coiffeurs);
 
 recherche.addEventListener("click", (e) => {
   let texteTape = input.value.toLowerCase();
-  console.log(texteTape);
+  // console.log(texteTape);
 
   let resultats = coiffeurs.filter(
     (coiffeur) =>

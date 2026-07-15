@@ -120,4 +120,4 @@ let coiffeurs = [
     realisations: ["photo1.jpg", "photo2.jpg"],
   },
 ];
-console.log(coiffeurs);
+// console.log(coiffeurs);

@@ -3,36 +3,39 @@
   --bs-primary-rgb: 15, 110, 86;
 }
 
+
 .btn-primary {
   background-color: #0F6E56;
   border-color: #0F6E56;
 }
+
 
 .btn-primary:hover {
   background-color: #0c5a47;
   border-color: #0c5a47;
 }
 
+
 .btn-primary:focus,
 .btn-primary:active {
   background-color: #0c5a47;
   border-color: #0c5a47;
 }
+
+
 body {
   font-family: "Poppins", sans-serif;
 }
-.card {
-  display: flex;
-  flex-direction: column;
-}
 
+
+/* Images des réalisations */
 #realisations {
-  order: 1;
   display: flex;
   gap: 8px;
   flex-wrap: wrap;
   margin: 1rem 0;
 }
+
 
 #realisations img {
   border: 1px solid var(--bs-border-color, #ddd);
@@ -42,22 +45,8 @@ body {
   object-fit: cover;
 }
 
-#identite {
-  order: 2;
-}
 
-#domicile {
-  order: 3;
-}
-
-#prestations {
-  order: 4;
-}
-
-.card > a {
-  order: 5;
-}
-
+/* Style des cartes */
 .card {
   border: none;
   border-radius: 15px;
@@ -65,11 +54,14 @@ body {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+
 .card:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
 }
 
+
+/* Couleur des titres */
 h1,
 h2,
 h3,
