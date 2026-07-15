@@ -1,3 +1,4 @@
+console.log("profil.js chargé");
 // Récupère l'id du coiffeur depuis l'URL (ex: profil.html?id=2 => "2")
 const params = new URLSearchParams(window.location.search);
 const idDansUrl = params.get("id");
@@ -7,12 +8,19 @@ const idNombre = Number(idDansUrl);
 
 // Recherche du coiffeur correspondant dans le tableau
 const coiffeurTrouve = coiffeurs.find((coiffeur) => coiffeur.id === idNombre);
+console.log("ID :", idNombre);
+console.log("Coiffeur trouvé :", coiffeurTrouve);
 
 // Récupération des conteneurs HTML
 const identiteContainer = document.getElementById("identite");
 const domicileContainer = document.getElementById("domicile");
 const prestationContainer = document.getElementById("prestations");
 const realisationContainer = document.getElementById("realisations");
+
+console.log("identite :", identiteContainer);
+console.log("domicile :", domicileContainer);
+console.log("prestations :", prestationContainer);
+console.log("realisations :", realisationContainer);
 
 // ======= IDENTITÉ DU COIFFEUR =======
 
@@ -22,7 +30,7 @@ identiteContainer.innerHTML = `
   <p>Expérience : ${coiffeurTrouve.anneesExperiences} ans</p>
   <p>Note : ${coiffeurTrouve.note}</p>
 `;
-
+console.log("IDENTITE OK");
 // ======= INFORMATIONS DOMICILE =======
 
 domicileContainer.innerHTML = `
@@ -36,7 +44,7 @@ domicileContainer.innerHTML = `
     ${coiffeurTrouve.zoneQuartier}
   </p>
 `;
-
+console.log("DOMICILE OK");
 // ======= PRESTATIONS =======
 
 let lesPrestations = "";
@@ -51,6 +59,7 @@ prestations.forEach((nomPrestation) => {
     </p>
   `;
 });
+console.log("PRESTATIONS OK");
 
 prestationContainer.innerHTML = lesPrestations;
 
@@ -116,6 +125,7 @@ photosVisibles.forEach((photo, index) => {
 // Affichage des photos visibles
 
 realisationContainer.innerHTML = lesPhotosVisibles;
+console.log("REALISATIONS OK");
 
 // ======= GALERIE COMPLÈTE DANS LA MODALE =======
 
@@ -134,10 +144,12 @@ toutesLesPhotos.forEach((photo) => {
 });
 
 galerieComplete.innerHTML = toutesLesImages;
+console.log("GALERIE COMPLETE OK");
 
 // ======= OUVERTURE DE LA MODALE =======
 
 const ouvrirGalerie = document.getElementById("ouvrirGalerie");
+console.log("BOUTON GALERIE :", ouvrirGalerie);
 
 if (ouvrirGalerie) {
   ouvrirGalerie.addEventListener("click", () => {
@@ -148,3 +160,5 @@ if (ouvrirGalerie) {
     maModale.show();
   });
 }
+
+console.log("FIN DU SCRIPT PROFIL");
