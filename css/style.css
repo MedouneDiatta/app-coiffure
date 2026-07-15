@@ -91,3 +91,41 @@ h6 {
     font-size: 0.85rem;
   }
 }
+
+/* Conteneur de la deuxième photo avec le +X */
+.photo-plus {
+  position: relative;
+  display: inline-block;
+}
+
+
+/* Taille des images de réalisations */
+#realisations img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+
+/* Le +X placé au-dessus de l'image */
+.photo-plus span {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: rgba(0, 0, 0, 0.5);
+
+  color: white;
+  font-size: 30px;
+  font-weight: 600;
+
+  border-radius: 10px;
+}
