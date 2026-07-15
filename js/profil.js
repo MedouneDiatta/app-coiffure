@@ -46,21 +46,24 @@ prestationContainer.innerHTML = lesPrestations;
 // afficher seulement les deux premières photos, ensuite une +X si d'autres photos existe et enfin ouvrir une modale contenant toute la galerie
 
 const toutesLesPhotos = coiffeurTrouve.realisations;
+console.log("toutes les photo :", toutesLesPhotos);
 const photosVisibles = coiffeurTrouve.realisations.slice(0, 2);
 
 let lesPhotosVisibles = "";
 photosVisibles.forEach((photo) => {
   lesPhotosVisibles += `
-      <img src="images/${photo}">
+      <img src="${photo}">
   `;
 });
+
+realisationContainer.innerHTML = lesPhotosVisibles;
 
 let lesRealisations = "";
 
 coiffeurTrouve.realisations.forEach((realisation) => {
   lesRealisations += `
     <img 
-      src="images/${realisation}" 
+      src="${realisation}" 
       class="img-fluid"
     >
   `;

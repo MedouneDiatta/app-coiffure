@@ -11,7 +11,7 @@ let coiffeurs = [
     prestations: { Degrade: 2000, coifureSimple: 1000 },
     realisations: [
       "images/photo1.jpg",
-      "images/photo2.jpg.jpg",
+      "images/photo2.jpg",
       "images/photo3.jpg",
       "images/photo4.jpg",
       "images/photo5.jpg",
@@ -29,7 +29,7 @@ let coiffeurs = [
     prestations: { Twitch: 11000, Tresse: 10000 },
     realisations: [
       "images/photo1.jpg",
-      "images/photo2.jpg.jpg",
+      "images/photo2.jpg",
       "images/photo3.jpg",
       "images/photo4.jpg",
       "images/photo5.jpg",
@@ -47,7 +47,7 @@ let coiffeurs = [
     prestations: { Rase: 2000, Typeu: 1000 },
     realisations: [
       "images/photo1.jpg",
-      "images/photo2.jpg.jpg",
+      "images/photo2.jpg",
       "images/photo3.jpg",
       "images/photo4.jpg",
       "images/photo5.jpg",
@@ -65,7 +65,7 @@ let coiffeurs = [
     prestations: { Loks: 2500, Simple: 1000 },
     realisations: [
       "images/photo1.jpg",
-      "images/photo2.jpg.jpg",
+      "images/photo2.jpg",
       "images/photo3.jpg",
       "images/photo4.jpg",
       "images/photo5.jpg",
@@ -83,7 +83,7 @@ let coiffeurs = [
     prestations: { Degrade: 26000, coifureSimple: 1500 },
     realisations: [
       "images/photo1.jpg",
-      "images/photo2.jpg.jpg",
+      "images/photo2.jpg",
       "images/photo3.jpg",
       "images/photo4.jpg",
       "images/photo5.jpg",
@@ -101,7 +101,7 @@ let coiffeurs = [
     prestations: { Cheveux: 26000, coifureSimple: 1500 },
     realisations: [
       "images/photo1.jpg",
-      "images/photo2.jpg.jpg",
+      "images/photo2.jpg",
       "images/photo3.jpg",
       "images/photo4.jpg",
       "images/photo5.jpg",
@@ -119,7 +119,7 @@ let coiffeurs = [
     prestations: { Rase: 26000, coifureSimple: 1500 },
     realisations: [
       "images/photo1.jpg",
-      "images/photo2.jpg.jpg",
+      "images/photo2.jpg",
       "images/photo3.jpg",
       "images/photo4.jpg",
       "images/photo5.jpg",
@@ -137,7 +137,7 @@ let coiffeurs = [
     prestations: { Cheveux: 26000, coifureSimple: 1500 },
     realisations: [
       "images/photo1.jpg",
-      "images/photo2.jpg.jpg",
+      "images/photo2.jpg",
       "images/photo3.jpg",
       "images/photo4.jpg",
       "images/photo5.jpg",
@@ -155,7 +155,7 @@ let coiffeurs = [
     prestations: { Cheveux: 26000, coifureSimple: 1500 },
     realisations: [
       "images/photo1.jpg",
-      "images/photo2.jpg.jpg",
+      "images/photo2.jpg",
       "images/photo3.jpg",
       "images/photo4.jpg",
       "images/photo5.jpg",
@@ -173,7 +173,7 @@ let coiffeurs = [
     prestations: { Cheveux: 26000, coifureSimple: 1500 },
     realisations: [
       "images/photo1.jpg",
-      "images/photo2.jpg.jpg",
+      "images/photo2.jpg",
       "images/photo3.jpg",
       "images/photo4.jpg",
       "images/photo5.jpg",
