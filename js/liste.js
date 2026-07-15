@@ -43,10 +43,10 @@ const afficherCoiffeurs = (tableauCoiffeurs) => {
                     ${coiffeur.prestations[prestation[0]]} FCFA
                 </p>
 
-                <a href="profil.html?id=${coiffeur.id}" class="btn btn-primary">
-                   <i class="bi bi-person-circle"></i>
-                    Voir le profil
-                 </a>
+              <a href="profil.html?id=${coiffeur.id}" class="btn btn-primary">
+                  <i class="bi bi-person-circle"></i>
+                  Voir le profil
+               </a>
 
             </div>
 
@@ -54,6 +54,7 @@ const afficherCoiffeurs = (tableauCoiffeurs) => {
     </div>
     `;
   });
+  console.log(htmlCartes);
 
   listeDesCoiffeurs.innerHTML = htmlCartes;
 

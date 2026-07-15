@@ -54,3 +54,4 @@ coiffeurTrouve.realisations.forEach((realisation) => {
 });
 
 realisationContainer.innerHTML = lesRealisations;
+document.getElementById("carte-profil").style.display = "block";
