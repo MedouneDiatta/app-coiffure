@@ -28,17 +28,17 @@ identiteContainer.innerHTML = `
 domicileContainer.innerHTML = `
   <p>
     Domicile :
-    ${coiffeurTrouve.aDomicile ? "Disponible à domicile" : "Au salon"}
+    ${coiffeurTrouve.aDomicile ? "À la maison" : "Au Salon"}
   </p>
 
   <p>
-    Zone/Quartier : ${coiffeurTrouve.zoneQuartier}
+    Zone/Quartier :
+    ${coiffeurTrouve.zoneQuartier}
   </p>
 `;
 
 // ======= PRESTATIONS =======
 
-// Récupère les noms des prestations disponibles
 let lesPrestations = "";
 
 const prestations = Object.keys(coiffeurTrouve.prestations);
@@ -55,29 +55,28 @@ prestations.forEach((nomPrestation) => {
 prestationContainer.innerHTML = lesPrestations;
 
 // ======= GALERIE DES RÉALISATIONS =======
-// Afficher seulement les deux premières photos,
-// puis afficher +X s'il existe d'autres photos.
-// La galerie complète sera utilisée plus tard dans une modale.
 
+// Toutes les photos
 const toutesLesPhotos = coiffeurTrouve.realisations;
 
 console.log("Toutes les photos :", toutesLesPhotos);
 
-// On garde uniquement les deux premières photos visibles
+// On garde seulement les deux premières photos
 const photosVisibles = coiffeurTrouve.realisations.slice(0, 2);
 
-// Nombre de photos cachées derrière le +X
+// Nombre de photos restantes
 const nombrePhotosRestantes = toutesLesPhotos.length - 2;
 
+// Construction des photos visibles
+
 let lesPhotosVisibles = "";
-// console.log("Photos visibles :", photosVisibles);
-/*
+
 photosVisibles.forEach((photo, index) => {
   // Première photo
   if (index === 0) {
     lesPhotosVisibles += `
       <img 
-        src="${photo}" 
+        src="${photo}"
         class="img-fluid"
       >
     `;
@@ -85,72 +84,41 @@ photosVisibles.forEach((photo, index) => {
 
   // Deuxième photo
   if (index === 1) {
-    // S'il reste des photos, afficher le +X
     if (nombrePhotosRestantes > 0) {
       lesPhotosVisibles += `
-      <div class="photo-plus" id="ouvrirGalerie">
-
-        <img 
-          src="${photo}" 
-          class="img-fluid"
+        <div 
+          class="photo-plus"
+          id="ouvrirGalerie"
         >
 
-        <span>
-          +${nombrePhotosRestantes}
-        </span>
+          <img 
+            src="${photo}"
+            class="img-fluid"
+          >
 
-      </div>
-    `;
+          <span>
+            +${nombrePhotosRestantes}
+          </span>
+
+        </div>
+      `;
     } else {
-      // s'il y'en a que deux
       lesPhotosVisibles += `
-      <img 
-        src="${photo}" 
-        class="img-fluid"
-      >
-    `;
+        <img 
+          src="${photo}"
+          class="img-fluid"
+        >
+      `;
     }
   }
 });
-*/
 
-photosVisibles.forEach((photo, index) => {
-  console.log("avant ajour:", lesPhotosVisibles);
+// Affichage des photos visibles
 
-  if (index === 0) {
-    console.log("PHOTO 1 AJOUTEE");
+realisationContainer.innerHTML = lesPhotosVisibles;
 
-    lesPhotosVisibles += "<img src='" + photo + "'>";
+// ======= GALERIE COMPLÈTE DANS LA MODALE =======
 
-    console.log("Après ajout photo 1 :", lesPhotosVisibles);
-  }
-
-  if (index === 1) {
-    lesPhotosVisibles += `
-            <div class="photo-plus" id="ouvrirGalerie">
-
-                <img src="${photo}" class="img-fluid">
-
-                <span>
-                    +${nombrePhotosRestantes}
-                </span>
-
-            </div>
-        `;
-  }
-  console.log("après ajour:", lesPhotosVisibles);
-});
-console.log("FIN DE LA BOUCLE :", lesPhotosVisibles);
-
-// Affichage des 2 photos dans la page
-console.log("HTML FINAL :", lesPhotosVisibles);
-realisationContainer.innerHTML = `
-    <h3>TEST AFFICHAGE</h3>
-    ${lesPhotosVisibles}
-`;
-console.log(lesPhotosVisibles);
-
-// Préparation de la galerie complète
 const galerieComplete = document.getElementById("galerie-complete");
 
 let toutesLesImages = "";
@@ -158,7 +126,7 @@ let toutesLesImages = "";
 toutesLesPhotos.forEach((photo) => {
   toutesLesImages += `
     <img 
-      src="${photo}" 
+      src="${photo}"
       class="img-fluid m-2"
       width="150"
     >
@@ -167,15 +135,16 @@ toutesLesPhotos.forEach((photo) => {
 
 galerieComplete.innerHTML = toutesLesImages;
 
-// Activation du clic sur le +X
+// ======= OUVERTURE DE LA MODALE =======
+
 const ouvrirGalerie = document.getElementById("ouvrirGalerie");
 
-console.log("ouvrirGalerie :", ouvrirGalerie);
+if (ouvrirGalerie) {
+  ouvrirGalerie.addEventListener("click", () => {
+    const maModale = new bootstrap.Modal(
+      document.getElementById("modaleGalerie"),
+    );
 
-ouvrirGalerie.addEventListener("click", () => {
-  const maModale = new bootstrap.Modal(
-    document.getElementById("modaleGalerie"),
-  );
-
-  maModale.show();
-});
+    maModale.show();
+  });
+}
