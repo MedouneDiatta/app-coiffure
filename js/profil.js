@@ -128,7 +128,7 @@ realisationContainer.innerHTML = lesPhotosVisibles;
 console.log("REALISATIONS OK");
 document.getElementById("carte-profil").style.display = "block";
 
-// ======= GALERIE COMPLÈTE DANS LA MODALE =======
+// GALERIE COMPLÈTE DANS LA MODALE
 
 const galerieComplete = document.getElementById("galerie-complete");
 

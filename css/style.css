@@ -142,3 +142,50 @@ h6 {
   object-fit: cover;
   border-radius: 8px;
 }
+
+
+   /* Bloc Horaires */
+
+.bloc-infos {
+  margin-top: 20px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+.entete-bloc {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 20px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.entete-bloc:hover {
+  background-color: rgba(15, 110, 86, 0.08);
+}
+
+.entete-bloc span {
+  font-size: 18px;
+  font-weight: 600;
+  color: #12314D;
+}
+
+.entete-bloc i {
+  font-size: 20px;
+  color: #0F6E56;
+  transition: 0.3s;
+}
+
+.entete-bloc span i {
+    margin-right: 10px;
+    color: #0F6E56;
+}
+
+#planning {
+  display: none;
+  padding: 20px;
+  border-top: 1px solid #ececec;
+}
