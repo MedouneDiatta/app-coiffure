@@ -5,6 +5,7 @@ const idDansUrl = params.get("id");
 // convertir l'id (texte) en nombre, puis retrouve le coiffeur correspondant
 const idNombre = Number(idDansUrl);
 // console.log("ID dans URL :", idDansUrl);
+
 // console.log("ID converti :", idNombre);
 // console.log("Liste coiffeurs :", coiffeurs);
 const coiffeurTrouve = coiffeurs.find((coiffeur) => coiffeur.id === idNombre);
@@ -39,8 +40,20 @@ prestation.forEach((nomPrestation) => {
     </p>
   `;
 });
-
 prestationContainer.innerHTML = lesPrestations;
+
+// =======FONCTIONALITe: gelerie des réalisations
+// afficher seulement les deux premières photos, ensuite une +X si d'autres photos existe et enfin ouvrir une modale contenant toute la galerie
+
+const toutesLesPhotos = coiffeurTrouve.realisations;
+const photosVisibles = coiffeurTrouve.realisations.slice(0, 2);
+
+let lesPhotosVisibles = "";
+photosVisibles.forEach((photo) => {
+  lesPhotosVisibles += `
+      <img src="images/${photo}">
+  `;
+});
 
 let lesRealisations = "";
 

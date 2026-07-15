@@ -8,7 +8,7 @@ const afficherCoiffeurs = (tableauCoiffeurs) => {
     let prestation = Object.keys(coiffeur.prestations);
 
     htmlCartes += `
-    <div class="col-md-4 mb-4">
+    <div class="col-6 col-md-4 mb-4">
         <div class="card h-100 shadow-sm p-3">
 
             <img
@@ -45,7 +45,7 @@ const afficherCoiffeurs = (tableauCoiffeurs) => {
 
               <a href="profil.html?id=${coiffeur.id}" class="btn btn-primary">
                   <i class="bi bi-person-circle"></i>
-                  Voir le profil
+                  Voir
                </a>
 
             </div>
@@ -57,30 +57,6 @@ const afficherCoiffeurs = (tableauCoiffeurs) => {
   // console.log(htmlCartes);
 
   listeDesCoiffeurs.innerHTML = htmlCartes;
-
-  /*let htmlCartes = "";
-  tableauCoiffeurs.forEach((coiffeur) => {
-    //   console.log(coiffeur.nom);
-    let prestation = Object.keys(coiffeur.prestations);
-    htmlCartes += `
-    <div class="col-12 col-md-6 col-lg-4">
-       <div class="card carte-coiffeur mb-3">
-          <div class="card-body">
-          <img src="${coiffeur.photo}" alt="${coiffeur.nom}">
-           <h4>Nom : ${coiffeur.nom}</h4>
-           <p>Spécialité : ${coiffeur.specialite}</p>
-           <p>Note : ${coiffeur.note}</p>
-           <p>A Domicil :${coiffeur.aDomicile ? "Oui" : "Non"}</p>
-           <p>Prestations :${coiffeur.prestations[prestation[0]]} FCFA</p>
-           <a href="profil.html?id=${coiffeur.id}" class="btn btn-primary">Voir le Profil</a>
-         </div>
-       
-       </div>  
-    </div>
-
-  `;
-  });
-  listeDesCoiffeurs.innerHTML = htmlCartes;*/
 };
 afficherCoiffeurs(coiffeurs);
 

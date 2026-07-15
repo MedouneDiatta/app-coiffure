@@ -9,7 +9,13 @@ let coiffeurs = [
     aDomicile: true,
     zoneQuartier: "Thies",
     prestations: { Degrade: 2000, coifureSimple: 1000 },
-    realisations: ["photo1.jpg", "photo2.jpg"],
+    realisations: [
+      "images/photo1.jpg",
+      "images/photo2.jpg.jpg",
+      "images/photo3.jpg",
+      "images/photo4.jpg",
+      "images/photo5.jpg",
+    ],
   },
   {
     id: 2,
@@ -21,7 +27,13 @@ let coiffeurs = [
     aDomicile: false,
     zoneQuartier: "Diassabe",
     prestations: { Twitch: 11000, Tresse: 10000 },
-    realisations: ["photo1.jpg", "photo2.jpg"],
+    realisations: [
+      "images/photo1.jpg",
+      "images/photo2.jpg.jpg",
+      "images/photo3.jpg",
+      "images/photo4.jpg",
+      "images/photo5.jpg",
+    ],
   },
   {
     id: 3,
@@ -33,7 +45,13 @@ let coiffeurs = [
     aDomicile: true,
     zoneQuartier: "Fahu",
     prestations: { Rase: 2000, Typeu: 1000 },
-    realisations: ["photo1.jpg", "photo2.jpg"],
+    realisations: [
+      "images/photo1.jpg",
+      "images/photo2.jpg.jpg",
+      "images/photo3.jpg",
+      "images/photo4.jpg",
+      "images/photo5.jpg",
+    ],
   },
   {
     id: 4,
@@ -45,7 +63,13 @@ let coiffeurs = [
     aDomicile: false,
     zoneQuartier: "Grand Thies",
     prestations: { Loks: 2500, Simple: 1000 },
-    realisations: ["photo1.jpg", "photo2.jpg"],
+    realisations: [
+      "images/photo1.jpg",
+      "images/photo2.jpg.jpg",
+      "images/photo3.jpg",
+      "images/photo4.jpg",
+      "images/photo5.jpg",
+    ],
   },
   {
     id: 5,
@@ -57,7 +81,13 @@ let coiffeurs = [
     aDomicile: true,
     zoneQuartier: "Grand Standing",
     prestations: { Degrade: 26000, coifureSimple: 1500 },
-    realisations: ["photo1.jpg", "photo2.jpg"],
+    realisations: [
+      "images/photo1.jpg",
+      "images/photo2.jpg.jpg",
+      "images/photo3.jpg",
+      "images/photo4.jpg",
+      "images/photo5.jpg",
+    ],
   },
   {
     id: 6,
@@ -69,7 +99,13 @@ let coiffeurs = [
     aDomicile: false,
     zoneQuartier: "Thies Thialy",
     prestations: { Cheveux: 26000, coifureSimple: 1500 },
-    realisations: ["photo1.jpg", "photo2.jpg"],
+    realisations: [
+      "images/photo1.jpg",
+      "images/photo2.jpg.jpg",
+      "images/photo3.jpg",
+      "images/photo4.jpg",
+      "images/photo5.jpg",
+    ],
   },
   {
     id: 7,
@@ -81,7 +117,13 @@ let coiffeurs = [
     aDomicile: true,
     zoneQuartier: "Thies Parcelle",
     prestations: { Rase: 26000, coifureSimple: 1500 },
-    realisations: ["photo1.jpg", "photo2.jpg"],
+    realisations: [
+      "images/photo1.jpg",
+      "images/photo2.jpg.jpg",
+      "images/photo3.jpg",
+      "images/photo4.jpg",
+      "images/photo5.jpg",
+    ],
   },
   {
     id: 8,
@@ -93,7 +135,13 @@ let coiffeurs = [
     aDomicile: false,
     zoneQuartier: "Thies Dixième",
     prestations: { Cheveux: 26000, coifureSimple: 1500 },
-    realisations: ["photo1.jpg", "photo2.jpg"],
+    realisations: [
+      "images/photo1.jpg",
+      "images/photo2.jpg.jpg",
+      "images/photo3.jpg",
+      "images/photo4.jpg",
+      "images/photo5.jpg",
+    ],
   },
   {
     id: 9,
@@ -105,7 +153,13 @@ let coiffeurs = [
     aDomicile: true,
     zoneQuartier: "Thies Diassabe",
     prestations: { Cheveux: 26000, coifureSimple: 1500 },
-    realisations: ["photo1.jpg", "photo2.jpg"],
+    realisations: [
+      "images/photo1.jpg",
+      "images/photo2.jpg.jpg",
+      "images/photo3.jpg",
+      "images/photo4.jpg",
+      "images/photo5.jpg",
+    ],
   },
   {
     id: 10,
@@ -117,7 +171,13 @@ let coiffeurs = [
     aDomicile: false,
     zoneQuartier: "Thies Grand Standing",
     prestations: { Cheveux: 26000, coifureSimple: 1500 },
-    realisations: ["photo1.jpg", "photo2.jpg"],
+    realisations: [
+      "images/photo1.jpg",
+      "images/photo2.jpg.jpg",
+      "images/photo3.jpg",
+      "images/photo4.jpg",
+      "images/photo5.jpg",
+    ],
   },
 ];
 // console.log(coiffeurs);
