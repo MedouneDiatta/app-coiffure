@@ -16,8 +16,10 @@ const identiteContainer = document.getElementById("identite");
 const domicileContainer = document.getElementById("domicile");
 const prestationContainer = document.getElementById("prestations");
 const realisationContainer = document.getElementById("realisations");
+const planningContainer = document.getElementById("planning");
 
 console.log("identite :", identiteContainer);
+
 console.log("domicile :", domicileContainer);
 console.log("prestations :", prestationContainer);
 console.log("realisations :", realisationContainer);
@@ -25,10 +27,49 @@ console.log("realisations :", realisationContainer);
 // ======= IDENTITÉ DU COIFFEUR =======
 
 identiteContainer.innerHTML = `
-  <h4>Nom : ${coiffeurTrouve.nom}</h4>
-  <p>Spécialité : ${coiffeurTrouve.specialite}</p>
-  <p>Expérience : ${coiffeurTrouve.anneesExperiences} ans</p>
-  <p>Note : ${coiffeurTrouve.note}</p>
+
+<!-- ==========================================
+            Identité du coiffeur
+=========================================== -->
+
+<div class="identite-premium">
+
+    <h2 class="nom-coiffeur">
+
+        ${coiffeurTrouve.nom}
+
+    </h2>
+
+    <div class="note-premium">
+
+        <i class="bi bi-star-fill"></i>
+
+        ${coiffeurTrouve.note}
+
+    </div>
+
+    <div class="info-premium">
+
+        <span>
+
+            <i class="bi bi-scissors"></i>
+
+            ${coiffeurTrouve.specialite}
+
+        </span>
+
+        <span>
+
+            <i class="bi bi-award-fill"></i>
+
+            ${coiffeurTrouve.anneesExperiences} ans d'expérience
+
+        </span>
+
+    </div>
+
+</div>
+
 `;
 console.log("IDENTITE OK");
 // ======= INFORMATIONS DOMICILE =======
@@ -161,5 +202,4 @@ if (ouvrirGalerie) {
     maModale.show();
   });
 }
-
-console.log("FIN DU SCRIPT PROFIL");
+// console.log("FIN DU SCRIPT PROFIL");

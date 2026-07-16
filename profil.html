@@ -27,31 +27,75 @@
 
   <body>
     <div class="container mt-4" id="profil-container">
-      <div
-        class="card shadow-sm p-4 text-center"
-        id="carte-profil"
-        style="display: none"
-      >
-   <div id="realisations"></div>
+      <!-- =====================================================
+                EN-TÊTE PREMIUM DU PROFIL
+====================================================== -->
 
-  <div class="bloc-infos">
+<div class="banniere-profil">
 
-    <div class="entete-bloc" id="btnHoraires">
-
-      <span>
-        <i class="bi bi-calendar-week"></i>
-        Planning hebdomadaire
-      </span>
-
-    </div>
-
-    <div id="planning"></div>
+    <img
+        src="images/bernard.jpg"
+        alt="Bannière"
+        class="image-banniere"
+    >
 
 </div>
 
-   <div id="identite"></div>
+<!-- ===================== PHOTO + IDENTITÉ ===================== -->
 
-<div id="domicile"></div>
+<div class="entete-profil">
+
+    <!-- Ici profil.js remplira automatiquement les informations -->
+
+    <div id="identite"></div>
+
+</div>
+
+<!-- ===================== ACTIONS ===================== -->
+
+<div class="actions-profil">
+
+    <a
+        href="rendezvous.html?id=1"
+        class="btn-reserver"
+    >
+
+        <i class="bi bi-calendar-check-fill"></i>
+
+        Réserver
+
+    </a>
+
+    <div class="actions-secondaires">
+
+        <button
+            class="btn-secondaire"
+            id="btnHoraires"
+        >
+
+            <i class="bi bi-clock-fill"></i>
+
+            Horaires
+
+        </button>
+
+        <button
+            class="btn-secondaire"
+        >
+
+            <i class="bi bi-chat-dots-fill"></i>
+
+            Message
+
+        </button>
+
+    </div>
+
+</div>
+
+<!-- ===================== PRESTATIONS ===================== -->
+
+<div id="prestations"></div>
 
 <div id="prestations"></div>
 
