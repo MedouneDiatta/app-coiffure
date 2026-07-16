@@ -295,3 +295,437 @@ h6 {
 .btn-profil i{
     margin-left:8px;
 }
+
+
+        /* NAVBAR */
+
+
+.navbar-coiffbook{
+    background:#ffffff;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 2px 15px rgba(0,0,0,.08);
+}
+
+.navbar-coiffbook .container{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 0;
+}
+
+.logo-zone{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo-zone img{
+    width:55px;
+}
+
+.logo-zone h2{
+    margin:0;
+    color:#12314D;
+    font-size:28px;
+    font-weight:700;
+}
+
+.menu{
+    display:flex;
+    gap:35px;
+}
+
+.menu a{
+    text-decoration:none;
+    color:#12314D;
+    font-weight:500;
+    transition:.3s;
+}
+
+.menu a:hover{
+    color:#0F6E56;
+}
+
+.menu .active{
+    color:#0F6E56;
+}
+
+
+            /* HERO */
+
+
+.hero{
+
+    background:linear-gradient(
+        180deg,
+        #F8FCFB 0%,
+        #EDF8F5 100%
+    );
+
+    padding:90px 0;
+
+    text-align:center;
+
+}
+
+.badge-hero{
+
+    display:inline-block;
+
+    background:#E5F5F1;
+
+    color:#0F6E56;
+
+    padding:10px 20px;
+
+    border-radius:50px;
+
+    font-weight:600;
+
+    margin-bottom:25px;
+
+}
+
+.hero h1{
+
+    color:#12314D;
+
+    font-size:52px;
+
+    font-weight:700;
+
+    margin-bottom:20px;
+
+}
+
+.hero p{
+
+    color:#6c757d;
+
+    font-size:19px;
+
+    width:700px;
+
+    max-width:90%;
+
+    margin:auto;
+
+    margin-bottom:45px;
+
+}
+
+
+      /* BARRE DE RECHERCHE */
+
+
+.recherche-container{
+
+    margin:auto;
+
+    margin-top:45px;
+
+    max-width:850px;
+
+    display:flex;
+
+    gap:18px;
+
+}
+
+.input-recherche{
+
+    flex:1;
+
+    display:flex;
+
+    align-items:center;
+
+    background:#fff;
+
+    border-radius:60px;
+
+    padding:0 22px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+}
+
+.input-recherche:focus-within{
+
+    transform:translateY(-2px);
+
+    box-shadow:0 15px 35px rgba(15,110,86,.18);
+
+}
+
+.input-recherche i{
+
+    color:#0F6E56;
+
+    font-size:22px;
+
+    margin-right:15px;
+
+}
+
+.input-recherche input{
+
+    width:100%;
+
+    height:65px;
+
+    border:none;
+
+    outline:none;
+
+    font-size:17px;
+
+    background:transparent;
+
+}
+
+.btn-recherche{
+
+    border:none;
+
+    background:#0F6E56;
+
+    color:white;
+
+    border-radius:60px;
+
+    padding:0 38px;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+    box-shadow:0 10px 25px rgba(15,110,86,.25);
+
+}
+
+.btn-recherche:hover{
+
+    background:#12314D;
+
+    transform:translateY(-2px);
+
+}
+
+/* pour le champ de recherche sur mobile et sur pc */
+
+@media (max-width:768px){
+
+    .recherche-container{
+
+        flex-direction:column;
+
+    }
+
+    .input-recherche{
+
+        width:100%;
+
+    }
+
+    .btn-recherche{
+
+        width:100%;
+
+        height:58px;
+
+    }
+
+}
+
+/*pour reduire le texte ecrit en dur sur la page d'accueil trouver votre coiffeur  */
+@media (max-width:768px){
+
+    .hero{
+
+        padding:55px 20px;
+
+    }
+
+    .hero h1{
+
+        font-size:34px;
+
+        line-height:1.2;
+
+    }
+
+    .hero p{
+
+        font-size:16px;
+
+        width:100%;
+
+        margin-top:18px;
+
+    }
+
+    .recherche-container{
+
+        flex-direction:column;
+
+        gap:15px;
+
+    }
+
+    .btn-recherche{
+
+        width:100%;
+
+        height:58px;
+
+    }
+
+}
+
+/* ===========================
+        MENU MOBILE
+=========================== */
+
+.btn-menu-mobile{
+
+    border:none;
+
+    background:transparent;
+
+    color:#12314D;
+
+    font-size:34px;
+
+    padding:0;
+
+}
+
+.btn-menu-mobile:focus{
+
+    box-shadow:none;
+
+}
+
+.offcanvas{
+
+    width:280px !important;
+
+    border-top-right-radius:25px;
+
+    border-bottom-right-radius:25px;
+
+}
+
+.offcanvas-header{
+
+    background:#12314D;
+
+    color:white;
+
+    padding:22px;
+
+}
+
+.offcanvas-title{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    font-size:22px;
+
+    font-weight:700;
+
+}
+
+.offcanvas-title img{
+
+    width:42px;
+
+}
+
+.offcanvas-body{
+
+    padding:0;
+
+    background:#F8FCFB;
+
+}
+
+.lien-menu{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    text-decoration:none;
+
+    color:#12314D;
+
+    font-size:18px;
+
+    font-weight:500;
+
+    padding:20px 25px;
+
+    transition:.3s;
+
+}
+
+.lien-menu i{
+
+    color:#0F6E56;
+
+    font-size:22px;
+
+}
+
+.lien-menu:hover{
+
+    background:#E5F5F1;
+
+    color:#0F6E56;
+
+}
+
+@media(min-width:992px){
+
+    .btn-menu-mobile{
+
+        display:none;
+
+    }
+
+}
+
+/* la taille du logo de l'appli su rla page d'accuel */
+/*.logo-zone img{
+
+    width:50px;
+    height:50px;
+
+}
+
+/* le bouton de notification */
+.actions-navbar{
+
+    margin-right:10px;
+
+}*/
+
+.btn-menu-mobile{
+
+    margin-left:10px;
+
+}

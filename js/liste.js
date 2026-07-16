@@ -15,8 +15,7 @@ const afficherCoiffeurs = (tableauCoiffeurs) => {
         <img
             src="${coiffeur.photo}"
             alt="${coiffeur.nom}"
-            class="photo-coiffeur"
-        >
+            class="photo-coiffeur">
 
         <div class="card-body">
 

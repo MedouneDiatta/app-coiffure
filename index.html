@@ -22,13 +22,28 @@
   <body>
     <nav class="navbar-coiffbook">
       <div class="container">
+        <!-- Menu Mobile -->
+
+        <button
+          class="btn-menu-mobile d-lg-none"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#menuMobile"
+          aria-label="Ouvrir le menu"
+        >
+          <i class="bi bi-list"></i>
+        </button>
+
+        <!-- Logo -->
+
         <div class="logo-zone">
           <img src="images/logo3.png" alt="COIFF BOOK" />
 
           <h2>COIFF BOOK</h2>
         </div>
 
-        <div class="menu">
+        <!-- Menu ordinateur -->
+
+        <div class="menu d-none d-lg-flex">
           <a href="#" class="active">Accueil</a>
 
           <a href="#">Coiffeurs</a>
@@ -37,9 +52,16 @@
 
           <a href="#">Connexion</a>
         </div>
+
+        <!-- Notifications -->
+
+        <div class="actions-navbar">
+          <button class="btn-notification">
+            <i class="bi bi-bell-fill"></i>
+          </button>
+        </div>
       </div>
     </nav>
-
     <section class="hero">
       <div class="container">
         <span class="badge-hero"> 💈 Réservation rapide </span>
@@ -92,6 +114,47 @@
       </div>
     </div>
 
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="menuMobile">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title">
+          <img src="images/logo3.png" width="35" />
+
+          COIFF BOOK
+        </h5>
+
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+        ></button>
+      </div>
+
+      <div class="offcanvas-body">
+        <a href="#" class="lien-menu">
+          <i class="bi bi-house"></i>
+
+          Accueil
+        </a>
+
+        <a href="#" class="lien-menu">
+          <i class="bi bi-scissors"></i>
+
+          Coiffeurs
+        </a>
+
+        <a href="#" class="lien-menu">
+          <i class="bi bi-calendar-check"></i>
+
+          Réservations
+        </a>
+
+        <a href="#" class="lien-menu">
+          <i class="bi bi-person"></i>
+
+          Connexion
+        </a>
+      </div>
+    </div>
     <script src="js/data.js"></script>
     <script src="js/liste.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
