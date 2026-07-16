@@ -8,62 +8,122 @@ const afficherCoiffeurs = (tableauCoiffeurs) => {
     let prestation = Object.keys(coiffeur.prestations);
 
     htmlCartes += `
-<div class="col-lg-4 col-md-6 mb-4">
 
-    <div class="card carte-coiffeur border-0">
+<!-- ==========================
+        Carte Coiffeur
+=========================== -->
 
-        <img
-            src="${coiffeur.photo}"
-            alt="${coiffeur.nom}"
-            class="photo-coiffeur">
+<div class="col-12 col-md-6 col-lg-4 mb-4">
+
+    <div class="card carte-coiffeur">
+
+        <!-- Photo du coiffeur -->
+
+        <div class="photo-container">
+
+            <img
+                src="${coiffeur.photo}"
+                alt="${coiffeur.nom}"
+                class="photo-coiffeur"
+            >
+
+            <!-- Bouton Favori -->
+
+            <button class="btn-favori">
+
+                <i class="bi bi-heart"></i>
+
+            </button>
+
+        </div>
 
         <div class="card-body">
 
-            <div class="d-flex justify-content-between align-items-center mb-2">
+            <!-- Note + disponibilité -->
 
-                <span class="note">
+            <div class="ligne-badges">
+
+                <span class="badge-note">
+
                     <i class="bi bi-star-fill"></i>
+
                     ${coiffeur.note}
+
                 </span>
 
-                <span class="disponible">
+                <span class="badge-dispo">
+
                     <i class="bi bi-circle-fill"></i>
+
                     Disponible
+
                 </span>
 
             </div>
+
+            <!-- Nom -->
 
             <h4 class="nom-coiffeur">
+
                 ${coiffeur.nom}
+
             </h4>
 
+            <!-- Spécialité -->
+
             <p class="specialite">
+
                 ${coiffeur.specialite}
+
             </p>
 
+            <!-- Quartier -->
+
             <p class="info">
+
                 <i class="bi bi-geo-alt-fill"></i>
+
                 ${coiffeur.zoneQuartier}
+
             </p>
+
+            <!-- Domicile -->
 
             <p class="info">
+
                 <i class="bi bi-house-door-fill"></i>
-                ${coiffeur.aDomicile ? "À domicile" : "Salon uniquement"}
+
+                ${
+                  coiffeur.aDomicile ? "Service à domicile" : "Salon uniquement"
+                }
+
             </p>
 
-            <div class="prix">
-                Dès
-                <strong>
+            <!-- Prix -->
+
+            <div class="bloc-prix">
+
+                <small>À partir de</small>
+
+                <h3>
+
                     ${coiffeur.prestations[prestation[0]]} FCFA
-                </strong>
+
+                </h3>
+
             </div>
+
+            <!-- Bouton -->
 
             <a
                 href="profil.html?id=${coiffeur.id}"
-                class="btn btn-profil w-100"
+                class="btn btn-profil"
             >
+
                 Voir le profil
+
                 <i class="bi bi-arrow-right"></i>
+
             </a>
 
         </div>
@@ -71,6 +131,7 @@ const afficherCoiffeurs = (tableauCoiffeurs) => {
     </div>
 
 </div>
+
 `;
   });
   // console.log(htmlCartes);
