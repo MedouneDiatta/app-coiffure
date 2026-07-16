@@ -8,51 +8,71 @@ const afficherCoiffeurs = (tableauCoiffeurs) => {
     let prestation = Object.keys(coiffeur.prestations);
 
     htmlCartes += `
-    <div class="col-6 col-md-4 mb-4">
-        <div class="card h-100 shadow-sm p-3">
+<div class="col-lg-4 col-md-6 mb-4">
 
-            <img
-                src="${coiffeur.photo}"
-                alt="${coiffeur.nom}"
-                class="rounded-circle mx-auto d-block mb-3"
-                style="width:120px; height:120px; object-fit:cover;"
-            >
+    <div class="card carte-coiffeur border-0">
 
-            <div class="card-body text-center">
+        <img
+            src="${coiffeur.photo}"
+            alt="${coiffeur.nom}"
+            class="photo-coiffeur"
+        >
 
-                <h4 class="card-title">${coiffeur.nom}</h4>
+        <div class="card-body">
 
-                <p class="card-text mb-1">
-                   <i class="bi bi-scissors"></i>
-                   <strong>Spécialité :</strong> ${coiffeur.specialite}
-                </p>
+            <div class="d-flex justify-content-between align-items-center mb-2">
 
-                <p class="card-text mb-1">
-                    <i class="bi bi-star-fill text-warning"></i>
-                    <strong>Note :</strong> ${coiffeur.note}
-                </p>
+                <span class="note">
+                    <i class="bi bi-star-fill"></i>
+                    ${coiffeur.note}
+                </span>
 
-                <p class="card-text mb-1">
-                    <i class="bi bi-house-door-fill"></i>
-                   <strong>À domicile :</strong>
-                   ${coiffeur.aDomicile ? "Oui" : "Non"}
-                </p>
-
-                <p class="card-text mb-3">
-                    <strong>${prestation[0]} :</strong>
-                    ${coiffeur.prestations[prestation[0]]} FCFA
-                </p>
-
-              <a href="profil.html?id=${coiffeur.id}" class="btn btn-primary">
-                  <i class="bi bi-person-circle"></i>
-                  Voir
-               </a>
+                <span class="disponible">
+                    <i class="bi bi-circle-fill"></i>
+                    Disponible
+                </span>
 
             </div>
 
+            <h4 class="nom-coiffeur">
+                ${coiffeur.nom}
+            </h4>
+
+            <p class="specialite">
+                ${coiffeur.specialite}
+            </p>
+
+            <p class="info">
+                <i class="bi bi-geo-alt-fill"></i>
+                ${coiffeur.zoneQuartier}
+            </p>
+
+            <p class="info">
+                <i class="bi bi-house-door-fill"></i>
+                ${coiffeur.aDomicile ? "À domicile" : "Salon uniquement"}
+            </p>
+
+            <div class="prix">
+                Dès
+                <strong>
+                    ${coiffeur.prestations[prestation[0]]} FCFA
+                </strong>
+            </div>
+
+            <a
+                href="profil.html?id=${coiffeur.id}"
+                class="btn btn-profil w-100"
+            >
+                Voir le profil
+                <i class="bi bi-arrow-right"></i>
+            </a>
+
         </div>
+
     </div>
-    `;
+
+</div>
+`;
   });
   // console.log(htmlCartes);
 

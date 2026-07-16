@@ -189,3 +189,109 @@ h6 {
   padding: 20px;
   border-top: 1px solid #ececec;
 }
+
+/* ===========================================
+   CARTES COIFFEURS - UI REDESIGN
+=========================================== */
+
+.carte-coiffeur {
+    border-radius: 20px;
+    overflow: hidden;
+    background: #fff;
+    transition: .35s;
+    box-shadow: 0 8px 25px rgba(0,0,0,.08);
+    height: 100%;
+}
+
+.carte-coiffeur:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 18px 40px rgba(0,0,0,.15);
+}
+
+.photo-coiffeur{
+    width:100%;
+    height:240px;
+    object-fit:cover;
+}
+
+.carte-coiffeur .card-body{
+    padding:22px;
+}
+
+.note{
+    color:#f5b301;
+    font-weight:600;
+}
+
+.note i{
+    margin-right:4px;
+}
+
+.disponible{
+    color:#0F6E56;
+    font-size:.9rem;
+    font-weight:600;
+}
+
+.disponible i{
+    font-size:8px;
+    margin-right:5px;
+}
+
+.nom-coiffeur{
+    color:#12314D;
+    font-size:1.45rem;
+    font-weight:700;
+    margin-top:10px;
+    margin-bottom:5px;
+}
+
+.specialite{
+    color:#666;
+    font-size:1rem;
+    margin-bottom:18px;
+}
+
+.info{
+    color:#555;
+    margin-bottom:8px;
+}
+
+.info i{
+    color:#0F6E56;
+    margin-right:8px;
+}
+
+.prix{
+    background:#F5F8FA;
+    border-radius:12px;
+    padding:12px;
+    margin:22px 0;
+    text-align:center;
+    color:#666;
+}
+
+.prix strong{
+    display:block;
+    color:#12314D;
+    font-size:1.2rem;
+    margin-top:4px;
+}
+
+.btn-profil{
+    background:#0F6E56;
+    color:white;
+    border-radius:12px;
+    padding:12px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.btn-profil:hover{
+    background:#0c5a47;
+    color:white;
+}
+
+.btn-profil i{
+    margin-left:8px;
+}

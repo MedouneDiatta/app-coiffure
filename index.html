@@ -20,33 +20,73 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <div class="container mt-4">
-      <div class="input-group mb-4" id="zone-de-recherche">
-        <input
-          class="form-control"
-          type="search"
-          placeholder="Taper le nom d'un coiffeur ou d'une coiffure"
-          id="cherche"
-        />
-        <button class="btn btn-primary" type="button" id="btn">
-          Rechercher
-        </button>
+    <nav class="navbar-coiffbook">
+      <div class="container">
+        <div class="logo-zone">
+          <img src="images/logo3.png" alt="COIFF BOOK" />
+
+          <h2>COIFF BOOK</h2>
+        </div>
+
+        <div class="menu">
+          <a href="#" class="active">Accueil</a>
+
+          <a href="#">Coiffeurs</a>
+
+          <a href="#">Réservation</a>
+
+          <a href="#">Connexion</a>
+        </div>
+      </div>
+    </nav>
+
+    <section class="hero">
+      <div class="container">
+        <span class="badge-hero"> 💈 Réservation rapide </span>
+
+        <h1>Trouvez votre coiffeur idéal</h1>
+
+        <p>Réservez en quelques clics, sans attendre au salon.</p>
+
+        <div class="recherche-container">
+          <div class="input-recherche">
+            <i class="bi bi-search"></i>
+
+            <input
+              type="search"
+              id="cherche"
+              placeholder="Nom du coiffeur ou spécialité..."
+            />
+          </div>
+
+          <button id="btn" class="btn-recherche">Rechercher</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="container mt-5">
+      <div class="titre-liste">
+        <h2>Les meilleurs coiffeurs</h2>
+
+        <p>Découvrez les meilleurs professionnels proches de vous.</p>
       </div>
 
-      <div id="liste-coiffeurs" class="row"></div>
-    </div>
+      <div id="liste-coiffeurs" class="row gy-4"></div>
+    </section>
 
     <div class="modal fade" id="modaleGalerie" tabindex="-1">
       <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title">Toutes les réalisations</h5>
+
             <button
               type="button"
               class="btn-close"
               data-bs-dismiss="modal"
             ></button>
           </div>
+
           <div class="modal-body" id="galerie-complete"></div>
         </div>
       </div>
