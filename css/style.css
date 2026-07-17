@@ -1286,6 +1286,24 @@ h6 {
 
 }
 
+.info-domicile {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+
+.info-domicile span {
+  color: #666;
+  font-weight: 600;
+}
+
+.info-domicile i {
+  color: #0F6E56;
+  margin-right: 8px;
+}
+
 .info-premium span{
 
     color:#666;

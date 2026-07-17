@@ -75,15 +75,16 @@ console.log("IDENTITE OK");
 // ======= INFORMATIONS DOMICILE =======
 
 domicileContainer.innerHTML = `
-  <p>
-    Domicile :
-    ${coiffeurTrouve.aDomicile ? "À la maison" : "Au Salon"}
-  </p>
-
-  <p>
-    Zone/Quartier :
-    ${coiffeurTrouve.zoneQuartier}
-  </p>
+  <div class="info-domicile">
+    <span>
+      <i class="bi bi-house-door-fill"></i>
+      ${coiffeurTrouve.aDomicile ? "À la maison" : "Au Salon"}
+    </span>
+    <span>
+      <i class="bi bi-geo-alt-fill"></i>
+      ${coiffeurTrouve.zoneQuartier}
+    </span>
+  </div>
 `;
 console.log("DOMICILE OK");
 /*=========================================
