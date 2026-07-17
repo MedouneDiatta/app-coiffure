@@ -1522,3 +1522,105 @@ h6 {
     color:#dc3545;
 
 }
+
+/*==========================================
+        Réservation Premium
+==========================================*/
+
+.choix-lieu{
+
+    display:flex;
+
+    gap:18px;
+
+    margin-bottom:30px;
+
+}
+
+.carte-lieu{
+
+    flex:1;
+
+    background:white;
+
+    border-radius:18px;
+
+    padding:20px;
+
+    text-align:center;
+
+    cursor:pointer;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+}
+
+.carte-lieu:hover{
+
+    transform:translateY(-4px);
+
+}
+
+.carte-lieu input{
+
+    display:none;
+
+}
+
+.carte-lieu i{
+
+    font-size:28px;
+
+    color:#0F6E56;
+
+    display:block;
+
+    margin-bottom:10px;
+
+}
+
+.carte-lieu span{
+
+    font-weight:600;
+
+    color:#12314D;
+
+}
+
+.champ-rdv{
+
+    border-radius:15px;
+
+    height:55px;
+
+}
+
+.btn-confirmer-rdv{
+
+    width:100%;
+
+    border:none;
+
+    border-radius:16px;
+
+    background:#12314D;
+
+    color:white;
+
+    padding:16px;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.btn-confirmer-rdv:hover{
+
+    background:#0F6E56;
+
+}
