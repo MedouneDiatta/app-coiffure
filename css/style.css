@@ -185,10 +185,11 @@ h6 {
 }
 
 #planning {
-  
+    
   padding: 20px;
   border-top: 1px solid #ececec;
 }
+
 
 /* ===========================================
    CARTES COIFFEURS - UI REDESIGN
@@ -1457,5 +1458,67 @@ h6 {
 .btn-reserver-prestation:hover{
 
     background:#0F6E56;
+
+}
+
+/*==========================================
+            Planning Premium
+==========================================*/
+
+.planning-premium{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:14px;
+
+    margin-top:20px;
+
+}
+
+.jour-card{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    background:white;
+
+    border-radius:18px;
+
+    padding:18px;
+
+    box-shadow:0 8px 18px rgba(0,0,0,.08);
+
+}
+
+.jour-card strong{
+
+    color:#12314D;
+
+    text-transform:capitalize;
+
+}
+
+.jour-card span{
+
+    color:#0F6E56;
+
+    font-weight:600;
+
+}
+
+.jour-card.ferme{
+
+    opacity:.65;
+
+}
+
+.jour-card.ferme span{
+
+    color:#dc3545;
 
 }

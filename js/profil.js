@@ -141,7 +141,9 @@ prestationContainer.innerHTML = `
   ${lesPrestations}
 `;
 
-// ======= PLANNING / HORAIRES =======
+/*======================================
+        Planning Premium
+======================================*/
 
 const jours = [
   "lundi",
@@ -152,16 +154,84 @@ const jours = [
   "samedi",
   "dimanche",
 ];
-let planning = "";
+
+let planning = `
+
+<h3 class="titre-section">
+
+    <i class="bi bi-calendar-week"></i>
+
+    Disponibilités
+
+</h3>
+
+<div class="planning-premium">
+
+`;
 
 jours.forEach((jour) => {
   const horaireDuJour = coiffeurTrouve.horaires[jour];
+
   if (horaireDuJour === null) {
-    planning += `<p>${jour} : Fermé</p>`;
+    planning += `
+
+        <div class="jour-card ferme">
+
+            <div>
+
+                <strong>
+
+                    ${jour.charAt(0).toUpperCase() + jour.slice(1)}
+
+                </strong>
+
+            </div>
+
+            <span>
+
+                Fermé
+
+            </span>
+
+        </div>
+
+        `;
   } else {
-    planning += `<p>${jour} : ${horaireDuJour.debut} - ${horaireDuJour.fin}</p>`;
+    planning += `
+
+        <div class="jour-card">
+
+            <div>
+
+                <strong>
+
+                    ${jour.charAt(0).toUpperCase() + jour.slice(1)}
+
+                </strong>
+
+            </div>
+
+            <span>
+
+                ${horaireDuJour.debut}
+
+                -
+
+                ${horaireDuJour.fin}
+
+            </span>
+
+        </div>
+
+        `;
   }
 });
+
+planning += `
+
+</div>
+
+`;
 
 planningContainer.innerHTML = planning;
 
