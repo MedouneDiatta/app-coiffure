@@ -1416,6 +1416,10 @@ h6 {
 
 .btn-reserver-prestation{
 
+    text-decoration: none;
+    display: inline-block;
+    white-space: nowrap;
+    flex-shrink: 0;
     border:none;
 
     background:#12314D;

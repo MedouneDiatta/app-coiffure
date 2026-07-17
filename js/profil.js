@@ -127,30 +127,19 @@ prestations.forEach((nomPrestation) => {
 
         </div>
 
-        <button class="btn-reserver-prestation">
-
-            Réserver
-
-        </button>
-
     </div>
 
     `;
 });
-
 prestationContainer.innerHTML = `
-
-<h3 class="titre-section">
-
+  <h3 class="titre-section">
     <i class="bi bi-scissors"></i>
-
     Prestations
+  </h3>
 
-</h3>
-
-${lesPrestations}
-
+  ${lesPrestations}
 `;
+
 // ======= GALERIE DES RÉALISATIONS =======
 
 // Toutes les photos
