@@ -2,13 +2,9 @@
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <title>profils</title>
-
+    <title>app-coiffure</title>
     <link rel="icon" href="images/logo3.png" />
-
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -21,146 +17,170 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
-
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="css/style.css" />
   </head>
-
   <body>
-    <div class="container mt-4" id="profil-container">
+    <nav class="navbar-coiffbook">
+      <div class="container">
+        <!-- Menu Mobile -->
 
-      <!-- Cache tant que profil.js n'a pas rempli toutes les infos,
-           puis passe en display:block a la fin du script -->
-      <div id="carte-profil" style="display: none">
+        <button
+          class="btn-menu-mobile d-lg-none"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#menuMobile"
+          aria-label="Ouvrir le menu"
+        >
+          <i class="bi bi-list"></i>
+        </button>
 
-        <!-- =====================================================
-                  EN-TÊTE PREMIUM DU PROFIL
-        ====================================================== -->
+        <!-- Logo -->
 
-        <div class="banniere-profil">
+        <div class="logo-zone">
+          <img src="images/logo3.png" alt="COIFF BOOK" />
 
-          <img
-            src="images/bernard.jpg"
-            alt="Bannière"
-            class="image-banniere"
-          >
-
+          <h2>COIFF BOOK</h2>
         </div>
 
-        <!-- ===================== PHOTO + IDENTITÉ ===================== -->
+        <!-- Menu ordinateur -->
 
-        <div class="entete-profil">
+        <div class="menu d-none d-lg-flex">
+          <a href="#" class="active">Accueil</a>
 
-          <!-- Ici profil.js remplira automatiquement les informations -->
+          <a href="#">Coiffeurs</a>
 
-          <div id="identite"></div>
+          <a href="#">Réservation</a>
 
+          <a href="#">Connexion</a>
         </div>
 
-        <!-- ===================== ACTIONS ===================== -->
+        <!-- Notifications -->
 
-        <div class="actions-profil">
-
-          
-            href="rendezvous.html?id=1"
-            class="btn-reserver"
-          >
-
-            <i class="bi bi-calendar-check-fill"></i>
-
-            Réserver
-
-          </a>
-
-          <div class="actions-secondaires">
-
-            <button
-              class="btn-secondaire"
-            >
-
-              <i class="bi bi-house-door-fill"></i>
-
-              Domicile
-
-            </button>
-
-            <button
-              class="btn-secondaire"
-            >
-
-              <i class="bi bi-chat-dots-fill"></i>
-
-              Message
-
-            </button>
-
-          </div>
-
-        </div>
-
-        <!-- ===================== DOMICILE / ZONE ===================== -->
-
-        <div id="domicile" class="p-3"></div>
-
-        <!-- ===================== PRESTATIONS ===================== -->
-
-        <div id="prestations"></div>
-
-        <!-- ===================== GALERIE ===================== -->
-
-        <h3 class="titre-section">
-          <i class="bi bi-images"></i>
-          Galerie
-        </h3>
-
-        <div id="realisations"></div>
-
-        <!-- ===================== PLANNING / HORAIRES ===================== -->
-
-        <div class="bloc-infos">
-
-          <div class="entete-bloc" id="btnHoraires">
-            <span>
-              <i class="bi bi-clock-fill"></i>
-              Planning hebdomadaire
-            </span>
-          </div>
-
-          <div id="planning"></div>
-
-        </div>
-
-      </div>
-      <!-- fin #carte-profil -->
-
-      <!-- Modale Bootstrap : affiche toutes les realisations,
-           remplie dynamiquement par profil.js au clic sur le +X -->
-      <div class="modal fade" id="modaleGalerie" tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered modal-lg">
-          <div class="modal-content">
-
-            <div class="modal-header">
-              <h5 class="modal-title">Toutes les réalisations</h5>
-
-              <button
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="modal">
-              </button>
-            </div>
-
-            <div class="modal-body" id="galerie-complete"></div>
-
-          </div>
+        <div class="actions-navbar">
+          <button class="btn-notification">
+            <i class="bi bi-bell-fill"></i>
+          </button>
         </div>
       </div>
+    </nav>
+    <section class="hero">
+      <div class="container">
+        <span class="badge-hero"> 💈 Réservation rapide </span>
 
+        <h1>Trouvez votre coiffeur idéal</h1>
+
+        <p>Réservez en quelques clics, sans attendre au salon.</p>
+
+        <div class="recherche-container">
+          <div class="input-recherche">
+            <i class="bi bi-search"></i>
+
+            <input
+              type="search"
+              id="cherche"
+              placeholder="Nom du coiffeur ou spécialité..."
+            />
+          </div>
+
+          <button id="btn" class="btn-recherche">Rechercher</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="container mt-5">
+      <div class="titre-liste">
+        <h2>Les meilleurs coiffeurs</h2>
+
+        <p>Découvrez les meilleurs professionnels proches de vous.</p>
+      </div>
+
+      <div id="liste-coiffeurs" class="row gy-4"></div>
+    </section>
+
+    <div class="modal fade" id="modaleGalerie" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Toutes les réalisations</h5>
+
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+
+          <div class="modal-body" id="galerie-complete"></div>
+        </div>
+      </div>
     </div>
 
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="menuMobile">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title">
+          <img src="images/logo3.png" width="35" />
+
+          COIFF BOOK
+        </h5>
+
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+        ></button>
+      </div>
+
+      <div class="offcanvas-body">
+        <!-- Profils utilisateur -->
+
+        <div class="profil-sidebar">
+          <img src="images/logo3.png" alt="Logo" />
+
+          <h4>Bienvenue 👋</h4>
+
+          <p>Réservez votre prochain rendez-vous.</p>
+        </div>
+
+        <!-- Navigation sidebar -->
+
+        <div class="menu-sidebar">
+          <a href="#" class="item-menu actif">
+            <i class="bi bi-house-door-fill"></i>
+
+            Accueil
+          </a>
+
+          <a href="#" class="item-menu">
+            <i class="bi bi-scissors"></i>
+
+            Coiffeurs
+          </a>
+
+          <a href="#" class="item-menu">
+            <i class="bi bi-calendar-check-fill"></i>
+
+            Réservations
+          </a>
+
+          <a href="#" class="item-menu">
+            <i class="bi bi-heart-fill"></i>
+
+            Favoris
+          </a>
+
+          <a href="#" class="item-menu">
+            <i class="bi bi-gear-fill"></i>
+
+            Paramètres
+          </a>
+        </div>
+
+        <!-- Pied de Sidebar -->
+
+        <div class="sidebar-footer">Version 1.0</div>
+      </div>
+    </div>
     <script src="js/data.js"></script>
-    <script src="js/profil.js"></script>
-
-    <!-- JavaScript Bootstrap : necessaire pour les modales, dropdown, etc. -->
+    <script src="js/liste.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
   </body>
 </html>

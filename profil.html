@@ -81,14 +81,23 @@
         <!-- ===================== PLANNING / HORAIRES ===================== -->
 
         <div class="bloc-infos">
-          <div class="entete-bloc" id="btnHoraires">
+          <div
+            class="entete-bloc"
+            id="btnHoraires"
+            data-bs-toggle="collapse"
+            data-bs-target="#planning"
+            role="button"
+            aria-expanded="false"
+            aria-controls="planning"
+          >
             <span>
               <i class="bi bi-clock-fill"></i>
               Planning hebdomadaire
             </span>
+            <i class="bi bi-chevron-down"></i>
           </div>
 
-          <div id="planning"></div>
+          <div id="planning" class="collapse"></div>
         </div>
 
         <!-- ===================== GALERIE ===================== -->

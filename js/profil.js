@@ -141,6 +141,30 @@ prestationContainer.innerHTML = `
   ${lesPrestations}
 `;
 
+// ======= PLANNING / HORAIRES =======
+
+const jours = [
+  "lundi",
+  "mardi",
+  "mercredi",
+  "jeudi",
+  "vendredi",
+  "samedi",
+  "dimanche",
+];
+let planning = "";
+
+jours.forEach((jour) => {
+  const horaireDuJour = coiffeurTrouve.horaires[jour];
+  if (horaireDuJour === null) {
+    planning += `<p>${jour} : Fermé</p>`;
+  } else {
+    planning += `<p>${jour} : ${horaireDuJour.debut} - ${horaireDuJour.fin}</p>`;
+  }
+});
+
+planningContainer.innerHTML = planning;
+
 // ======= GALERIE DES RÉALISATIONS =======
 
 // Toutes les photos
