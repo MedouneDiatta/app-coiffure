@@ -1228,9 +1228,9 @@ h6 {
 
 }
 
-/*======================================================
+/*=============================================
             IDENTITÉ PREMIUM
-======================================================*/
+=============================================*/
 
 .identite-premium{
 
@@ -1299,5 +1299,141 @@ h6 {
     color:#0F6E56;
 
     margin-right:8px;
+
+}
+
+/*======================================================
+                PRESTATIONS PREMIUM
+======================================================*/
+
+.titre-section{
+
+    color:#12314D;
+
+    font-size:28px;
+
+    font-weight:700;
+
+    margin-top:45px;
+
+    margin-bottom:25px;
+
+}
+
+.titre-section i{
+
+    color:#0F6E56;
+
+    margin-right:10px;
+
+}
+
+/*==============================*/
+
+.carte-prestation{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:20px;
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:20px;
+
+    margin-bottom:18px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+/*==============================*/
+
+.icone-prestation{
+
+    width:65px;
+
+    height:65px;
+
+    border-radius:18px;
+
+    background:#E8F5F1;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:28px;
+
+    color:#0F6E56;
+
+}
+
+/*==============================*/
+
+.contenu-prestation{
+
+    flex:1;
+
+}
+
+.contenu-prestation h5{
+
+    color:#12314D;
+
+    font-weight:700;
+
+    margin-bottom:6px;
+
+}
+
+.contenu-prestation span{
+
+    color:#888;
+
+    font-size:14px;
+
+}
+
+.contenu-prestation h4{
+
+    color:#0F6E56;
+
+    margin-top:6px;
+
+    font-weight:700;
+
+}
+
+/*==============================*/
+
+.btn-reserver-prestation{
+
+    border:none;
+
+    background:#12314D;
+
+    color:white;
+
+    border-radius:14px;
+
+    padding:12px 20px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.btn-reserver-prestation:hover{
+
+    background:#0F6E56;
 
 }

@@ -86,7 +86,9 @@ domicileContainer.innerHTML = `
   </p>
 `;
 console.log("DOMICILE OK");
-// ======= PRESTATIONS =======
+/*=========================================
+        Prestations Premium
+=========================================*/
 
 let lesPrestations = "";
 
@@ -94,16 +96,61 @@ const prestations = Object.keys(coiffeurTrouve.prestations);
 
 prestations.forEach((nomPrestation) => {
   lesPrestations += `
-    <p>
-      ${nomPrestation} :
-      ${coiffeurTrouve.prestations[nomPrestation]} FCFA
-    </p>
-  `;
+
+    <div class="carte-prestation">
+
+        <div class="icone-prestation">
+
+            <i class="bi bi-scissors"></i>
+
+        </div>
+
+        <div class="contenu-prestation">
+
+            <h5>
+
+                ${nomPrestation}
+
+            </h5>
+
+            <span>
+
+                À partir de
+
+            </span>
+
+            <h4>
+
+                ${coiffeurTrouve.prestations[nomPrestation]} FCFA
+
+            </h4>
+
+        </div>
+
+        <button class="btn-reserver-prestation">
+
+            Réserver
+
+        </button>
+
+    </div>
+
+    `;
 });
-console.log("PRESTATIONS OK");
 
-prestationContainer.innerHTML = lesPrestations;
+prestationContainer.innerHTML = `
 
+<h3 class="titre-section">
+
+    <i class="bi bi-scissors"></i>
+
+    Prestations
+
+</h3>
+
+${lesPrestations}
+
+`;
 // ======= GALERIE DES RÉALISATIONS =======
 
 // Toutes les photos

@@ -27,110 +27,106 @@
 
   <body>
     <div class="container mt-4" id="profil-container">
-      <!-- =====================================================
-                EN-TÊTE PREMIUM DU PROFIL
-====================================================== -->
+      <!-- Cache tant que profil.js n'a pas rempli toutes les infos,
+           puis passe en display:block a la fin du script -->
+      <div id="carte-profil" style="display: none">
+        <!-- =====================================================
+                  EN-TÊTE PREMIUM DU PROFIL
+        ====================================================== -->
 
-<div class="banniere-profil">
+        <div class="banniere-profil">
+          <img src="images/bernard.jpg" alt="Bannière" class="image-banniere" />
+        </div>
 
-    <img
-        src="images/bernard.jpg"
-        alt="Bannière"
-        class="image-banniere"
-    >
+        <!-- ===================== PHOTO + IDENTITÉ ===================== -->
 
-</div>
+        <div class="entete-profil">
+          <!-- Ici profil.js remplira automatiquement les informations -->
 
-<!-- ===================== PHOTO + IDENTITÉ ===================== -->
+          <div id="identite"></div>
+        </div>
 
-<div class="entete-profil">
+        <!-- ===================== ACTIONS ===================== -->
 
-    <!-- Ici profil.js remplira automatiquement les informations -->
+        <div class="actions-profil">
+          <a href="rendezvous.html?id=1" class="btn-reserver">
+            <i class="bi bi-calendar-check-fill"></i>
 
-    <div id="identite"></div>
+            Réserver
+          </a>
 
-</div>
+          <div class="actions-secondaires">
+            <button class="btn-secondaire">
+              <i class="bi bi-house-door-fill"></i>
 
-<!-- ===================== ACTIONS ===================== -->
+              Domicile
+            </button>
 
-<div class="actions-profil">
+            <button class="btn-secondaire">
+              <i class="bi bi-chat-dots-fill"></i>
 
-    <a
-        href="rendezvous.html?id=1"
-        class="btn-reserver"
-    >
+              Message
+            </button>
+          </div>
+        </div>
 
-        <i class="bi bi-calendar-check-fill"></i>
+        <!-- ===================== DOMICILE / ZONE ===================== -->
 
-        Réserver
+        <div id="domicile" class="p-3"></div>
 
-    </a>
+        <!-- ===================== PRESTATIONS ===================== -->
 
-    <div class="actions-secondaires">
+        <div id="prestations"></div>
 
-        <button
-            class="btn-secondaire"
-            id="btnHoraires"
-        >
+        <!-- ===================== GALERIE ===================== -->
 
-            <i class="bi bi-clock-fill"></i>
+        <h3 class="titre-section">
+          <i class="bi bi-images"></i>
+          Galerie
+        </h3>
 
-            Horaires
+        <div id="realisations"></div>
 
-        </button>
+        <!-- ===================== PLANNING / HORAIRES ===================== -->
 
-        <button
-            class="btn-secondaire"
-        >
+        <div class="bloc-infos">
+          <div class="entete-bloc" id="btnHoraires">
+            <span>
+              <i class="bi bi-clock-fill"></i>
+              Planning hebdomadaire
+            </span>
+          </div>
 
-            <i class="bi bi-chat-dots-fill"></i>
-
-            Message
-
-        </button>
-
-    </div>
-
-</div>
-
-<!-- ===================== PRESTATIONS ===================== -->
-
-<div id="prestations"></div>
-
-<div id="prestations"></div>
-
-<a href="rendezvous.html?id=1" class="btn btn-primary">
-    Prendre un rendez-vous
-</a>
-
-<!-- Ici on ajoute la modale (Modale Boostrap qui va affcher toutes les realisation et elles restent cachées jusqu'au clic sur le bouton +X et là le contenu sera rempli dynamiquement par profil.js)-->
-<div class="modal fade" id="modaleGalerie" tabindex="-1">
-  <div class="modal-dialog modal-dialog-centered modal-lg">
-    <div class="modal-content">
-
-      <!-- on a ici l'entete de la modale -->
-      <div class="modal-header">
-        <h5 class="modal-title">Toutes les réalisations</h5>
-
-        <button
-          type="button"
-          class="btn-close"
-          data-bs-dismiss="modal">
-        </button>
+          <div id="planning"></div>
+        </div>
       </div>
+      <!-- fin #carte-profil -->
 
-      <!--  ci on a le container qui va recevoir toutes le pohots-->
-      <div class="modal-body" id="galerie-complete"></div>
+      <!-- Modale Bootstrap : affiche toutes les realisations,
+           remplie dynamiquement par profil.js au clic sur le +X -->
+      <div class="modal fade" id="modaleGalerie" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Toutes les réalisations</h5>
 
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+              ></button>
+            </div>
+
+            <div class="modal-body" id="galerie-complete"></div>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
 
-<script src="js/data.js"></script>
-<script src="js/profil.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/profil.js"></script>
 
-<!--JavaScript boostrap est :necessaire pour les modale, dropdown,etc  -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-</body>
+    <!-- JavaScript Bootstrap : necessaire pour les modales, dropdown, etc. -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>
