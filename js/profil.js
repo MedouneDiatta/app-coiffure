@@ -17,6 +17,9 @@ const domicileContainer = document.getElementById("domicile");
 const prestationContainer = document.getElementById("prestations");
 const realisationContainer = document.getElementById("realisations");
 const planningContainer = document.getElementById("planning");
+const avisContainer = document.getElementById("avis");
+console.log(coiffeurTrouve.avis);
+console.log(coiffeurTrouve.nombreAvis);
 
 console.log("identite :", identiteContainer);
 
@@ -234,6 +237,32 @@ planning += `
 `;
 
 planningContainer.innerHTML = planning;
+
+// POUR LES AVIS ET LES ETOILES
+
+let lesAvis = "";
+
+coiffeurTrouve.avis.forEach((unAvis) => {
+  let etoiles = "";
+  for (let i = 0; i < unAvis.note; i++) {
+    etoiles += `<i class="bi bi-star-fill"></i>`;
+  }
+
+  lesAvis += `
+    <div class="carte-avis">
+      <div class="etoiles-avis">${etoiles}</div>
+      <p class="commentaire-avis">${unAvis.commentaire}</p>
+      <p class="auteur-avis">— ${unAvis.nom}</p>
+    </div>
+  `;
+});
+avisContainer.innerHTML = `
+  <div class="entete-avis">
+    <span>Note : ${coiffeurTrouve.note}</span>
+    <span>${coiffeurTrouve.nombreAvis} avis</span>
+  </div>
+  ${lesAvis}
+`;
 
 // ======= GALERIE DES RÉALISATIONS =======
 
