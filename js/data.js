@@ -35,6 +35,7 @@ let coiffeurs = [
       { nom: "Aïcha", note: 5, commentaire: "Je recommande sans hésiter." },
     ],
     nombreAvis: 128,
+    adresse: "Avenue Léopold Sédar Senghor, Thiès",
   },
   {
     id: 2,
@@ -109,6 +110,7 @@ let coiffeurs = [
       { nom: "Aïcha", note: 5, commentaire: "Je recommande sans hésiter." },
     ],
     nombreAvis: 128,
+    adresse: "Thies,Fahu 1",
   },
   {
     id: 4,
@@ -146,6 +148,7 @@ let coiffeurs = [
       { nom: "Aïcha", note: 5, commentaire: "Je recommande sans hésiter." },
     ],
     nombreAvis: 128,
+    adresse: "Dakar",
   },
   {
     id: 5,
@@ -183,6 +186,8 @@ let coiffeurs = [
       { nom: "Jean Luc", note: 5, commentaire: "Je recommande sans hésiter." },
     ],
     nombreAvis: 128,
+    adresse: "Thies,Fahu 1",
+    adresse: "Thies,Grand Thies",
   },
   {
     id: 6,
@@ -220,6 +225,7 @@ let coiffeurs = [
       { nom: "Aïcha", note: 5, commentaire: "Je recommande sans hésiter." },
     ],
     nombreAvis: 128,
+    adresse: "Thies,Parcelle",
   },
   {
     id: 7,
@@ -265,6 +271,7 @@ let coiffeurs = [
       },
     ],
     nombreAvis: 128,
+    adresse: "Thies,Grand Standing",
   },
   {
     id: 8,
@@ -306,6 +313,7 @@ let coiffeurs = [
       { nom: "Aïcha", note: 5, commentaire: "Je recommande sans hésiter." },
     ],
     nombreAvis: 128,
+    adresse: "Thies,Fahu 2",
   },
   {
     id: 9,
@@ -347,6 +355,7 @@ let coiffeurs = [
       },
     ],
     nombreAvis: 163,
+    adresse: "Thies,Diassape",
   },
   {
     id: 10,
@@ -393,6 +402,7 @@ let coiffeurs = [
       },
     ],
     nombreAvis: 25,
+    adresse: "Thies,Thialy",
   },
 ];
 // console.log(coiffeurs);

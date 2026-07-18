@@ -18,6 +18,8 @@ const prestationContainer = document.getElementById("prestations");
 const realisationContainer = document.getElementById("realisations");
 const planningContainer = document.getElementById("planning");
 const avisContainer = document.getElementById("avis");
+const localisationContainer = document.getElementById("localisation");
+console.log(localisationContainer);
 console.log(coiffeurTrouve.avis);
 console.log(coiffeurTrouve.nombreAvis);
 
@@ -323,6 +325,16 @@ photosVisibles.forEach((photo, index) => {
   }
 });
 
+// Localisaton de l'adress
+localisationContainer.innerHTML = `
+  <div class="carte-localisation">
+    <p><i class="bi bi-geo-alt-fill"></i> ${coiffeurTrouve.adresse}</p>
+    <a href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(coiffeurTrouve.adresse)}" target="_blank" class="btn-secondaire">
+      Cliquez ici pour voir sur la carte
+    </a>
+  </div>
+`;
+
 // Affichage des photos visibles
 
 realisationContainer.innerHTML = lesPhotosVisibles;
@@ -362,4 +374,5 @@ if (ouvrirGalerie) {
     maModale.show();
   });
 }
+
 // console.log("FIN DU SCRIPT PROFIL");

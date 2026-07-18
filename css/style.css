@@ -1750,3 +1750,27 @@ h6 {
   font-style: italic;
   margin: 0;
 }
+
+/* Style du bouton pour la localisaton  */
+.carte-localisation {
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+}
+
+.carte-localisation p {
+  color: #12314D;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.carte-localisation i {
+  color: #0F6E56;
+  margin-right: 6px;
+}
+
+.btn-secondaire {
+  text-decoration: none;
+  /* ... le reste de tes styles existants ... */
+}
