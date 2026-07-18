@@ -1624,3 +1624,95 @@ h6 {
     background:#0F6E56;
 
 }
+
+/*==========================================
+        Confirmation réservation
+==========================================*/
+
+.carte-confirmation{
+
+    background:#fff;
+
+    border-radius:22px;
+
+    padding:25px;
+
+    margin-top:30px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+}
+
+.confirmation-header{
+
+    text-align:center;
+
+    margin-bottom:25px;
+
+}
+
+.confirmation-header i{
+
+    font-size:55px;
+
+    color:#0F6E56;
+
+}
+
+.confirmation-header h3{
+
+    margin-top:10px;
+
+    color:#12314D;
+
+    font-weight:700;
+
+}
+
+.confirmation-header p{
+
+    color:#666;
+
+}
+
+.ligne-confirmation{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:14px 0;
+
+    border-bottom:1px solid #ececec;
+
+}
+
+.ligne-confirmation span{
+
+    color:#666;
+
+}
+
+.ligne-confirmation strong{
+
+    color:#12314D;
+
+}
+
+.total{
+
+    border-bottom:none;
+
+    margin-top:15px;
+
+    font-size:20px;
+
+}
+
+.total strong{
+
+    color:#0F6E56;
+
+}

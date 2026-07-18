@@ -54,15 +54,83 @@ formulaire.addEventListener("submit", (e) => {
   }
 
   const recapitulatif = document.getElementById("recapitulatif");
+
+  // récupération du prix de la prestation choisie
+  const prix = coiffeurTrouve.prestations[valeurPrestation];
+
   recapitulatif.innerHTML = `
-     <p>Nom : ${valeurNom}</p>
-     <p>Telephone : ${valeurTelphone}</p>
-     <p>Adress : ${valeurAdress}</p>
-     <p>Prestation : ${valeurPrestation}</p>
-     <p>Date : ${valeurDate}</p>
-     <p>Heure : ${valeurTime}</p>
-     <p>Lieu : ${valeurLieu}</p>
-  `;
+
+<div class="carte-confirmation">
+
+    <div class="confirmation-header">
+
+        <i class="bi bi-check-circle-fill"></i>
+
+        <h3>Réservation confirmée</h3>
+
+        <p>Votre demande a bien été enregistrée.</p>
+
+    </div>
+
+    <div class="ligne-confirmation">
+
+        <span>👤 Client</span>
+
+        <strong>${valeurNom}</strong>
+
+    </div>
+
+    <div class="ligne-confirmation">
+
+        <span>💈 Coiffeur</span>
+
+        <strong>${coiffeurTrouve.nom}</strong>
+
+    </div>
+
+    <div class="ligne-confirmation">
+
+        <span>✂ Prestation</span>
+
+        <strong>${valeurPrestation}</strong>
+
+    </div>
+
+    <div class="ligne-confirmation">
+
+        <span>📅 Date</span>
+
+        <strong>${valeurDate}</strong>
+
+    </div>
+
+    <div class="ligne-confirmation">
+
+        <span>🕒 Heure</span>
+
+        <strong>${valeurTime}</strong>
+
+    </div>
+
+    <div class="ligne-confirmation">
+
+        <span>📍 Lieu</span>
+
+        <strong>${valeurLieu}</strong>
+
+    </div>
+
+    <div class="ligne-confirmation total">
+
+        <span>💰 Total</span>
+
+        <strong>${prix} FCFA</strong>
+
+    </div>
+
+</div>
+
+`;
   recapitulatif.style.display = "block";
   formulaire.reset();
 });
