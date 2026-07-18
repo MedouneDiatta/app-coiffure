@@ -7,7 +7,7 @@ let coiffeurs = [
     anneesExperiences: 5,
     note: 4.8,
     aDomicile: true,
-    zoneQuartier: "Thies",
+    zoneQuartier: "Avenue Léopold Sédar Senghor, Thiès",
     prestations: { Degrade: 2000, coifureSimple: 1000 },
     realisations: [
       "images/photo1.jpg",
@@ -45,7 +45,7 @@ let coiffeurs = [
     anneesExperiences: 3,
     note: 3.7,
     aDomicile: false,
-    zoneQuartier: "Diassabe",
+    zoneQuartier: "Thies,Diassape",
     prestations: { Twitch: 11000, Tresse: 10000 },
     realisations: [
       "images/photo1.jpg",
@@ -73,6 +73,7 @@ let coiffeurs = [
       { nom: "Aïcha", note: 5, commentaire: "Je recommande sans hésiter." },
     ],
     nombreAvis: 128,
+    adress: "Thies,Diassape",
   },
   {
     id: 3,
@@ -82,7 +83,7 @@ let coiffeurs = [
     anneesExperiences: 2,
     note: 2.6,
     aDomicile: true,
-    zoneQuartier: "Fahu",
+    zoneQuartier: "Thies,Fahu 1",
     prestations: { Rase: 2000, Typeu: 1000 },
     realisations: [
       "images/photo1.jpg",
@@ -120,7 +121,7 @@ let coiffeurs = [
     anneesExperiences: 4,
     note: 4.8,
     aDomicile: false,
-    zoneQuartier: "Grand Thies",
+    zoneQuartier: "Dakar,Parcelle",
     prestations: { Loks: 2500, Simple: 1000 },
     realisations: [
       "images/photo1.jpg",
@@ -148,7 +149,7 @@ let coiffeurs = [
       { nom: "Aïcha", note: 5, commentaire: "Je recommande sans hésiter." },
     ],
     nombreAvis: 128,
-    adresse: "Dakar",
+    adresse: "Dakar,Parcelle",
   },
   {
     id: 5,
@@ -158,7 +159,7 @@ let coiffeurs = [
     anneesExperiences: 5,
     note: 4.8,
     aDomicile: true,
-    zoneQuartier: "Grand Standing",
+    zoneQuartier: "Thies,Grand Thies",
     prestations: { Degrade: 26000, coifureSimple: 1500 },
     realisations: [
       "images/photo1.jpg",
@@ -186,7 +187,7 @@ let coiffeurs = [
       { nom: "Jean Luc", note: 5, commentaire: "Je recommande sans hésiter." },
     ],
     nombreAvis: 128,
-    adresse: "Thies,Fahu 1",
+
     adresse: "Thies,Grand Thies",
   },
   {
@@ -225,7 +226,7 @@ let coiffeurs = [
       { nom: "Aïcha", note: 5, commentaire: "Je recommande sans hésiter." },
     ],
     nombreAvis: 128,
-    adresse: "Thies,Parcelle",
+    adresse: "Thies Thialy",
   },
   {
     id: 7,
@@ -235,7 +236,7 @@ let coiffeurs = [
     anneesExperiences: 3,
     note: 4.8,
     aDomicile: true,
-    zoneQuartier: "Thies Parcelle",
+    zoneQuartier: "Thies,Grand Standing",
     prestations: { Rase: 26000, coifureSimple: 1500 },
     realisations: [
       "images/photo1.jpg",
@@ -281,7 +282,7 @@ let coiffeurs = [
     anneesExperiences: 2,
     note: 2.8,
     aDomicile: false,
-    zoneQuartier: "Thies Dixième",
+    zoneQuartier: "Thies,Fahu 2",
     prestations: { Cheveux: 26000, coifureSimple: 1500 },
     realisations: [
       "images/photo1.jpg",
@@ -323,7 +324,7 @@ let coiffeurs = [
     anneesExperiences: 5,
     note: 4.8,
     aDomicile: true,
-    zoneQuartier: "Thies Diassabe",
+    zoneQuartier: "Thies,Diassape",
     prestations: { Cheveux: 26000, coifureSimple: 1500 },
     realisations: [
       "images/photo1.jpg",
@@ -365,7 +366,7 @@ let coiffeurs = [
     anneesExperiences: 4,
     note: 3.8,
     aDomicile: false,
-    zoneQuartier: "Thies Grand Standing",
+    zoneQuartier: "Thies,Thialy",
     prestations: { Cheveux: 26000, coifureSimple: 1500 },
     realisations: [
       "images/photo1.jpg",
