@@ -330,7 +330,7 @@ localisationContainer.innerHTML = `
   <div class="carte-localisation">
     <p><i class="bi bi-geo-alt-fill"></i> ${coiffeurTrouve.adresse}</p>
     <a href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(coiffeurTrouve.adresse)}" target="_blank" class="btn-secondaire">
-      Cliquez ici pour voir sur la carte
+      Obtenir l'itinéraire 
     </a>
   </div>
 `;

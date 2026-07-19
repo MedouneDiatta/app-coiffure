@@ -1774,3 +1774,144 @@ h6 {
   text-decoration: none;
   /* ... le reste de tes styles existants ... */
 }
+
+
+/*==========================================
+            DASHBOARD CLIENT
+==========================================*/
+
+.dashboard-body{
+
+    background:#f5f7fb;
+
+    font-family:'Poppins',sans-serif;
+
+}
+
+.dashboard-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:30px;
+
+}
+
+.dashboard-header h2{
+
+    color:#12314D;
+
+    font-weight:700;
+
+    margin-bottom:5px;
+
+}
+
+.dashboard-header p{
+
+    color:#777;
+
+    margin:0;
+
+}
+
+.dashboard-header img{
+
+    width:60px;
+
+    height:60px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+}
+
+.dashboard-card{
+
+    background:white;
+
+    border-radius:22px;
+
+    padding:25px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+}
+
+.dashboard-card-header{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    color:#0F6E56;
+
+    font-weight:600;
+
+    margin-bottom:20px;
+
+}
+
+.dashboard-card h4{
+
+    color:#12314D;
+
+    font-weight:700;
+
+    margin-bottom:20px;
+
+}
+
+.dashboard-card p{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    color:#555;
+
+    margin-bottom:12px;
+
+}
+
+.dashboard-card p i{
+
+    color:#0F6E56;
+
+}
+
+.btn-dashboard{
+
+    width:100%;
+
+    margin-top:20px;
+
+    border:none;
+
+    border-radius:15px;
+
+    background:#12314D;
+
+    color:white;
+
+    padding:14px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.btn-dashboard:hover{
+
+    background:#0F6E56;
+
+}
