@@ -41,7 +41,7 @@ identiteContainer.innerHTML = `
 
     <h2 class="nom-coiffeur">
 
-        ${coiffeurTrouve.nom}
+        <!-- ${coiffeurTrouve.nom}-->
 
     </h2>
 
@@ -373,6 +373,16 @@ if (ouvrirGalerie) {
 
     maModale.show();
   });
+}
+
+// ===============================
+// Bottom Navigation
+// ===============================
+
+const btnBottomRdv = document.getElementById("btnBottomRdv");
+
+if (btnBottomRdv) {
+  btnBottomRdv.href = `rendezvous.html?id=${coiffeurTrouve.id}`;
 }
 
 // console.log("FIN DU SCRIPT PROFIL");

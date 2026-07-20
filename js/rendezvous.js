@@ -52,85 +52,43 @@ formulaire.addEventListener("submit", (e) => {
     alert("L'adresse ne peut contenir que des lettres et des chiffres !");
     return;
   }
+  // Création de l'objet réservation
 
-  const recapitulatif = document.getElementById("recapitulatif");
+  const reservation = {
+    nom: valeurNom,
 
-  // récupération du prix de la prestation choisie
-  const prix = coiffeurTrouve.prestations[valeurPrestation];
+    telephone: valeurTelphone,
 
-  recapitulatif.innerHTML = `
+    adresse: valeurAdress,
 
-<div class="carte-confirmation">
+    prestation: valeurPrestation,
 
-    <div class="confirmation-header">
+    date: valeurDate,
 
-        <i class="bi bi-check-circle-fill"></i>
+    heure: valeurTime,
 
-        <h3>Réservation confirmée</h3>
+    lieu: valeurLieu,
 
-        <p>Votre demande a bien été enregistrée.</p>
+    coiffeur: coiffeurTrouve.nom,
 
-    </div>
+    specialite: coiffeurTrouve.specialite,
 
-    <div class="ligne-confirmation">
+    photo: coiffeurTrouve.photo,
+  };
 
-        <span>👤 Client</span>
+  // Sauvegarde temporaire
 
-        <strong>${valeurNom}</strong>
+  localStorage.setItem(
+    "reservation",
 
-    </div>
+    JSON.stringify(reservation),
+  );
 
-    <div class="ligne-confirmation">
+  // Réinitialisation du formulaire
 
-        <span>💈 Coiffeur</span>
-
-        <strong>${coiffeurTrouve.nom}</strong>
-
-    </div>
-
-    <div class="ligne-confirmation">
-
-        <span>✂ Prestation</span>
-
-        <strong>${valeurPrestation}</strong>
-
-    </div>
-
-    <div class="ligne-confirmation">
-
-        <span>📅 Date</span>
-
-        <strong>${valeurDate}</strong>
-
-    </div>
-
-    <div class="ligne-confirmation">
-
-        <span>🕒 Heure</span>
-
-        <strong>${valeurTime}</strong>
-
-    </div>
-
-    <div class="ligne-confirmation">
-
-        <span>📍 Lieu</span>
-
-        <strong>${valeurLieu}</strong>
-
-    </div>
-
-    <div class="ligne-confirmation total">
-
-        <span>💰 Total</span>
-
-        <strong>${prix} FCFA</strong>
-
-    </div>
-
-</div>
-
-`;
-  recapitulatif.style.display = "block";
   formulaire.reset();
+
+  // Redirection vers la page de confirmation
+
+  window.location.href = "confirmation.html";
 });
