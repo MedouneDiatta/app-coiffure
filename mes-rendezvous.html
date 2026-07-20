@@ -5,7 +5,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Confirmation</title>
+    <title>Mes rendez-vous</title>
 
     <link rel="icon" href="images/logo3.png" />
 
@@ -27,36 +27,20 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
 
-  <body class="confirmation-body">
-    <div class="confirmation-container">
-      <div class="confirmation-card">
-        <div class="success-icon">
-          <i class="bi bi-check-circle-fill"></i>
-        </div>
+  <body>
+    <div class="container py-4">
+      <h2 class="fw-bold mb-4">
+        <i class="bi bi-calendar2-check-fill text-success"></i>
 
-        <h2>Réservation envoyée !</h2>
+        Mes rendez-vous
+      </h2>
 
-        <p class="confirmation-message">
-          Votre demande a bien été envoyée au coiffeur.
-        </p>
+      <!-- Les cartes seront créées automatiquement -->
 
-        <div id="detailsReservation"></div>
-
-        <div class="confirmation-buttons">
-          <a href="dashboard.html" class="btn-dashboard">
-            Retour au Dashboard
-          </a>
-
-          <a href="mes-rendezvous.html" class="btn-secondaire-dashboard">
-            Mes rendez-vous
-          </a>
-        </div>
-      </div>
+      <div id="listeRendezVous"></div>
     </div>
 
-    <!--=====================================
-        Bottom Navigation
-======================================-->
+    <!-- Bottom Navigation -->
 
     <nav class="bottom-nav">
       <a href="index.html" class="bottom-item">
@@ -90,6 +74,6 @@
       </a>
     </nav>
 
-    <script src="js/confirmation.js"></script>
+    <script src="js/mes-rendezvous.js"></script>
   </body>
 </html>

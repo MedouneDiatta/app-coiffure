@@ -76,8 +76,30 @@ formulaire.addEventListener("submit", (e) => {
     photo: coiffeurTrouve.photo,
   };
 
-  // Sauvegarde temporaire
+  // ===============================
+  // Sauvegarde des réservations
+  // ===============================
 
+  // On récupère les anciennes réservations
+  let mesReservations =
+    JSON.parse(localStorage.getItem("mesReservations")) || [];
+
+  // On ajoute la nouvelle
+  mesReservations.push({
+    ...reservation,
+
+    statut: "En attente",
+  });
+
+  // On sauvegarde le tableau
+  localStorage.setItem(
+    "mesReservations",
+
+    JSON.stringify(mesReservations),
+  );
+
+  // On garde aussi la dernière réservation
+  // pour confirmation.html
   localStorage.setItem(
     "reservation",
 
@@ -92,3 +114,13 @@ formulaire.addEventListener("submit", (e) => {
 
   window.location.href = "confirmation.html";
 });
+
+// ===============================
+// Bottom Navigation
+// ===============================
+
+const btnBottomRdv = document.getElementById("btnBottomRdv");
+
+if (btnBottomRdv) {
+  btnBottomRdv.href = `rendezvous.html?id=${coiffeurTrouve.id}`;
+}
