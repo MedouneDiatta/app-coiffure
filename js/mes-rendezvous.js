@@ -68,7 +68,7 @@ else {
 
                         <h5 class="fw-bold">
 
-                            💈 ${rdv.coiffeur}
+                             ${rdv.coiffeur}
 
                         </h5>
 
@@ -80,19 +80,19 @@ else {
 
                         <p class="mb-1">
 
-                            📅 ${rdv.date}
+                             ${rdv.date}
 
                         </p>
 
                         <p class="mb-1">
 
-                            🕒 ${rdv.heure}
+                             ${rdv.heure}
 
                         </p>
 
                         <p>
 
-                            📍 ${rdv.lieu}
+                             ${rdv.lieu}
 
                         </p>
 
@@ -106,6 +106,32 @@ else {
 
                 </div>
 
+                <div class="d-flex gap-2 mt-3">
+
+   <a
+    href="details-rendezvous.html?index=${index}"
+    class="btn btn-outline-success flex-fill"
+>
+
+    <i class="bi bi-eye-fill"></i>
+
+    Voir les détails
+
+</a>
+
+    <button
+        class="btn btn-outline-danger flex-fill btnAnnuler"
+        data-index="${index}"
+    >
+
+        <i class="bi bi-x-circle-fill"></i>
+
+        Annuler
+
+    </button>
+
+</div>
+
             </div>
 
         </div>
@@ -115,3 +141,31 @@ else {
 
   listeRendezVous.innerHTML = cartes;
 }
+
+// ===============================
+// Boutons Annuler
+// ===============================
+
+const boutonsAnnuler = document.querySelectorAll(".btnAnnuler");
+
+boutonsAnnuler.forEach((bouton) => {
+  bouton.addEventListener("click", () => {
+    const index = bouton.dataset.index;
+
+    const confirmation = confirm(
+      "Voulez-vous vraiment annuler ce rendez-vous ?",
+    );
+
+    if (!confirmation) return;
+
+    mesReservations[index].statut = "Annulé";
+
+    localStorage.setItem(
+      "mesReservations",
+
+      JSON.stringify(mesReservations),
+    );
+
+    location.reload();
+  });
+});
